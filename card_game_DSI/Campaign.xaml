@@ -26,5 +26,37 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" />
         </Grid>
+
+        <!--Botón para ir a la página 1-->
+        <Button Content="Go To Battle 1"
+                Click="BoardButton_OnClick"
+                VerticalAlignment="Top"
+                Grid.Row="1"
+                Margin="727,718,0,0" Height="41" Width="143" />
+        <Button Content="Go To Battle 1"
+                Click="BoardButton_OnClick"
+                VerticalAlignment="Top"
+                Grid.Row="1"
+                Margin="994,525,0,0" Height="41" Width="142" />
+        <Button Content="Go To Battle 1"
+                Click="BoardButton_OnClick"
+                VerticalAlignment="Top"
+                Grid.Row="1"
+                Margin="436,525,0,0" Height="42" Width="143" />
+        <Button Content="Go To Battle 1"
+                Click="BoardButton_OnClick"
+                VerticalAlignment="Top"
+                Grid.Row="1"
+                Margin="923,335,0,0" Height="41" Width="143" />
+        <Button Content="Go To Battle 1"
+                Click="BoardButton_OnClick"
+                VerticalAlignment="Top"
+                Grid.Row="1"
+                Margin="277,335,0,0" Height="41" Width="143" />
+        <Button Content="Go To Battle 1"
+            Click="BoardButton_OnClick"
+            VerticalAlignment="Top"
+            Grid.Row="1"
+            Margin="1151,335,0,0" Height="41" Width="143" />
     </Grid>
 </Page>

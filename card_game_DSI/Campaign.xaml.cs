@@ -36,5 +36,12 @@ namespace card_game_DSI
                 Frame.GoBack();
             }
         }
+
+        private void BoardButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            // The Page.Frame property is a reference to the Frame that's displaying the page.
+            // Use Frame.Navigate to go to the next page.
+            Frame.Navigate(typeof(Board));
+        }
     }
 }
