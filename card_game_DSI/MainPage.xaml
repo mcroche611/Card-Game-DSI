@@ -6,9 +6,87 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#abd2ab">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
 
+        <!--Lianas-->
+        <Image Source="/Assets/Left vine.png" 
+               Stretch="Uniform" 
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top" 
+               Height="206" 
+               Width="155"/>
+
+        <Image Source="/Assets/Right vine.png" 
+               Grid.Column="1"
+               Stretch="Uniform" 
+               HorizontalAlignment="Right"
+               VerticalAlignment="Top" 
+               Height="75" 
+               Width="134"/>
+
+        <!--Botones principales-->
+        <StackPanel Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom" 
+                    IsDoubleTapEnabled="False" 
+                    IsHoldingEnabled="False" 
+                    IsRightTapEnabled="False">
+            <Button x:Name="Campaign"
+                    Background="Transparent"
+                    Width="459"
+                    Height="668" 
+                    FontFamily="Forte" 
+                    FontSize="48">
+                <Canvas>
+                    <Image Source="/Assets/Campaign.png" 
+                           Height="683" 
+                           Width="465" 
+                           Canvas.Left="-240" 
+                           Canvas.Top="-332"/>
+                    <TextBlock Text="CAMPAIGN" 
+                        Canvas.Left="-127" 
+                               Canvas.Top="157" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center" 
+                               TextAlignment="Center" 
+                               TextWrapping="Wrap" 
+                               IsDoubleTapEnabled="False" 
+                               IsHoldingEnabled="False" 
+                               IsRightTapEnabled="False" 
+                               IsTapEnabled="False"/>
+                </Canvas>
+            </Button>
+            <!--Background="Transparent"-->
+            <Button x:Name="OnlineMatch"
+                    Width="533"
+                    Height="668" 
+                    FontFamily="Forte" 
+                    FontSize="48">
+                <Canvas>
+                    <Image Source="/Assets/Online Match.png" Height="683" Width="539" Canvas.Left="-270" Canvas.Top="-334" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Text="ONLINE MATCH" 
+                               TextWrapping="Wrap"
+                               Canvas.Left="-179" 
+                               HorizontalAlignment="Left" 
+                               VerticalAlignment="Center" 
+                               TextAlignment="Center" 
+                               IsDoubleTapEnabled="False" 
+                               IsHoldingEnabled="False" 
+                               IsRightTapEnabled="False" 
+                               IsTapEnabled="False" 
+                               Width="296" Canvas.Top="136"/>
+                </Canvas>
+            </Button>
+        </StackPanel>
     </Grid>
 </Page>

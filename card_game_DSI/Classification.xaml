@@ -17,7 +17,7 @@
 
       <Grid Background="AntiqueWhite"
             Padding="10">
-        <Button Click="BackButton_OnClick">
+        <Button>
           <SymbolIcon Symbol="Back" />
         </Button>
 

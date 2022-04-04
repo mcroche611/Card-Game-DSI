@@ -163,6 +163,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Campaign.png" />
+    <Content Include="Assets\Left vine.png" />
+    <Content Include="Assets\Online Match.png" />
+    <Content Include="Assets\Right vine.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
