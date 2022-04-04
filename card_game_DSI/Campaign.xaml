@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="card_game_DSI.BlankPage1"
+    x:Class="card_game_DSI.Campaign"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:card_game_DSI"
@@ -9,6 +9,22 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <!--Back button-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
+        <Grid Background="AntiqueWhite"
+              Padding="10">
+            <Button Click="BackButton_OnClick">
+                <SymbolIcon Symbol="Back" />
+            </Button>
+
+            <TextBlock Text="Campaign"
+                       Style="{ThemeResource TitleTextBlockStyle}"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center" />
+        </Grid>
     </Grid>
 </Page>

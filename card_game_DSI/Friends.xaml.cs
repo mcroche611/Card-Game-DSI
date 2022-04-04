@@ -20,11 +20,21 @@ namespace card_game_DSI
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class BlankPage5 : Page
+    public sealed partial class Friends : Page
     {
-        public BlankPage5()
+        public Friends()
         {
             this.InitializeComponent();
+        }
+
+        private void BackButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            // First, check that it's safe to ask the Frame to go backward.
+            if (Frame.CanGoBack)
+            {
+                // If there's a page in the "backstack," we can call GoBack().
+                Frame.GoBack();
+            }
         }
     }
 }

@@ -20,9 +20,9 @@ namespace card_game_DSI
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class BlankPage7 : Page
+    public sealed partial class Classification : Page
     {
-        public BlankPage7()
+        public Classification()
         {
             this.InitializeComponent();
         }
