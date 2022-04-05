@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,6 +23,8 @@ namespace card_game_DSI
     /// </summary>
     public sealed partial class Friends : Page
     {
+        public ObservableCollection<User> friends { get; } = new ObservableCollection<User>();
+
         public Friends()
         {
             this.InitializeComponent();
@@ -35,6 +38,18 @@ namespace card_game_DSI
                 // If there's a page in the "backstack," we can call GoBack().
                 Frame.GoBack();
             }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (friends != null)
+                foreach (User user in Leaderboard.GetLeaderboard())
+                {
+                    friends.Add(user);
+                }
+            base.OnNavigatedTo(e);
+
+            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
         }
     }
 }

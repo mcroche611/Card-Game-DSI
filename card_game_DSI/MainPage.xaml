@@ -298,7 +298,8 @@
                     Height="94" 
                     FontFamily="Bookman Old Style" 
                     FontSize="48" 
-                    VerticalAlignment="Bottom">
+                    VerticalAlignment="Bottom"
+                    Click="Friends_Click">
                 <Image Source="/Assets/Friends.png"  
                        Stretch="UniformToFill" 
                        Margin="-10,-5,-11,-8" 

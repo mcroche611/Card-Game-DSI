@@ -16,7 +16,7 @@ namespace card_game_DSI
         public User(int identificator, string name) { 
             id = identificator;
             username = name;
-            profilePicture = $"Assets\\Profile Pictures\\{id}.jpg";
+            profilePicture = $"Assets\\Profile Pictures\\{id}.png";
             status = "Hey there! Wanna battle me?";
         }
     }

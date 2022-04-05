@@ -32,5 +32,10 @@ namespace card_game_DSI
         {
             Frame.Navigate(typeof(Classification));
         }
+
+        private void Friends_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Friends));
+        }
     }
 }
