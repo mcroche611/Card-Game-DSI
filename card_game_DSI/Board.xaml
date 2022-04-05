@@ -25,6 +25,109 @@
                    Style="{ThemeResource TitleTextBlockStyle}"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center" />
+          
+
       </Grid>
+        <!--Cartas-->
+        <Button x:Name="Ardilla"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="349,441,-540,-535" />
+        </Button>
+
+        <Button x:Name="Alce"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Alce.jpg" Margin="509,441,-700,-535" />
+        </Button>
+
+        <Button x:Name="Ardilla2"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="509,237,-700,-331" />
+        </Button>
+
+        <Button x:Name="Conejo"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Conejo.jpg" Margin="829,238,-1020,-332" />
+        </Button>
+
+        <Button x:Name="Armiño"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Armiño.jpg" Margin="677,441,-868,-535" />
+        </Button>
+
+        <Button x:Name="Scale"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/scale.png" Margin="13,206,-292,-419" />
+        </Button>
+
+        <Button x:Name="Bells"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/bell.png" Margin="46,682,-229,-760" />
+        </Button>
+
+        <Button x:Name="Ardilla3"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="1216,667,-1407,-761" />
+        </Button>
+
+        <Button x:Name="Ardilla4"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="1216,703,-1407,-797" />
+        </Button>
+
+        <Button x:Name="Ardilla5"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="1219,744,-1410,-838" />
+        </Button>
+
     </Grid>
 </Page>

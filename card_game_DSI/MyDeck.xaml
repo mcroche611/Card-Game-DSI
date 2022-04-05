@@ -9,22 +9,59 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-      <!--Back button-->
-      <Grid.RowDefinitions>
-        <RowDefinition Height="Auto" />
-        <RowDefinition />
-      </Grid.RowDefinitions>
+        <!--Back button-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
 
-      <Grid Background="AntiqueWhite"
-            Padding="10">
-        <Button Click="BackButton_OnClick">
-          <SymbolIcon Symbol="Back" />
-        </Button>
+        <Grid Background="AntiqueWhite"
+            Padding="10" Grid.Column="1">
+            <Button Click="BackButton_OnClick">
+                <SymbolIcon Symbol="Back" />
+            </Button>
 
-        <TextBlock Text="My Deck"
+            <TextBlock Text="My Deck"
                    Style="{ThemeResource TitleTextBlockStyle}"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center" />
-      </Grid>
+
+        </Grid>
+
+        <Button x:Name="Ardilla3"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="136,240,-327,-334" />
+        </Button>
+
+        <Button x:Name="Ardilla4"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="133,268,-324,-362" />
+        </Button>
+
+        <Button x:Name="Ardilla5"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="134,303,-325,-397" />
+        </Button>
     </Grid>
 </Page>

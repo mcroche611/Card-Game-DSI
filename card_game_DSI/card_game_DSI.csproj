@@ -166,6 +166,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\bell.png" />
     <Content Include="Assets\Campaign.png" />
     <Content Include="Assets\Cards\Abeja.jpg" />
     <Content Include="Assets\Cards\Alce Macho.jpg" />
@@ -236,6 +237,7 @@
     <Content Include="Assets\Profile Pictures\4.jpg" />
     <Content Include="Assets\Profile Pictures\5.png" />
     <Content Include="Assets\Right vine.png" />
+    <Content Include="Assets\scale.png" />
     <Content Include="Assets\Settings.png" />
     <Content Include="Assets\Store.png" />
     <Content Include="Properties\Default.rd.xml" />
