@@ -214,7 +214,8 @@
                     FontFamily="Bookman Old Style" 
                     FontSize="48" 
                     HorizontalAlignment="Right" 
-                    Margin="0,40,0,0">
+                    Margin="0,40,0,0"
+                    Click="Classification_Click">
                 <Canvas>
                     <Image Source="/Assets/Classification.png" 
                            Height="270" Width="487" 

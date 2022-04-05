@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +23,24 @@ namespace card_game_DSI
     /// </summary>
     public sealed partial class Classification : Page
     {
+        public ObservableCollection<User> leaderboard { get; } = new ObservableCollection<User>();
+
         public Classification()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // Cosntruye las listas de ModelView a partir de la lista Modelo 
+            if (leaderboard != null)
+                foreach (User user in Leaderboard.GetLeaderboard())
+                {
+                    leaderboard.Add(user);
+                }
+            base.OnNavigatedTo(e);
+
+            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
         }
     }
 }

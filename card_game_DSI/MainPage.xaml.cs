@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +26,11 @@ namespace card_game_DSI
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Classification_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Classification));
         }
     }
 }

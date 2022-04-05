@@ -125,6 +125,8 @@
     <Compile Include="Campaign.xaml.cs">
       <DependentUpon>Campaign.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Leaderboard.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Classification.xaml.cs">
       <DependentUpon>Classification.xaml</DependentUpon>
     </Compile>
@@ -232,9 +234,9 @@
     <Content Include="Assets\My deck.png" />
     <Content Include="Assets\Online Match.png" />
     <Content Include="Assets\Profile Pictures\1.png" />
-    <Content Include="Assets\Profile Pictures\2.jpg" />
+    <Content Include="Assets\Profile Pictures\2.png" />
     <Content Include="Assets\Profile Pictures\3.png" />
-    <Content Include="Assets\Profile Pictures\4.jpg" />
+    <Content Include="Assets\Profile Pictures\4.png" />
     <Content Include="Assets\Profile Pictures\5.png" />
     <Content Include="Assets\Right vine.png" />
     <Content Include="Assets\scale.png" />
