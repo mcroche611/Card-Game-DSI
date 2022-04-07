@@ -30,6 +30,16 @@ namespace card_game_DSI
             this.InitializeComponent();
         }
 
+        private void BackButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            // First, check that it's safe to ask the Frame to go backward.
+            if (Frame.CanGoBack)
+            {
+                // If there's a page in the "backstack," we can call GoBack().
+                Frame.GoBack();
+            }
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             // Cosntruye las listas de ModelView a partir de la lista Modelo 

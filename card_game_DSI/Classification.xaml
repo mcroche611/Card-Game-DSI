@@ -33,7 +33,7 @@
 
       <Grid Background="AntiqueWhite"
             Padding="10">
-        <Button>
+            <Button Click="BackButton_OnClick">
           <SymbolIcon Symbol="Back" />
         </Button>
 
