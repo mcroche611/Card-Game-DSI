@@ -45,7 +45,8 @@
                 <Button x:Name="Campaign"
                         Background="Transparent"
                         FontFamily="Forte" 
-                        FontSize="96">
+                        FontSize="96"
+                        Click="Campaign_Click">
                     <Grid>
                         <Image Source="/Assets/Campaign.png"/>
                         <TextBlock Text="CAMPAIGN" 
@@ -59,7 +60,8 @@
                 <Button x:Name="OnlineMatch"
                         Background="Transparent"
                         FontFamily="Forte" 
-                        FontSize="96" Padding="0,0,0,0">
+                        FontSize="96" Padding="0,0,0,0"
+                        Click="OnlineMatch_Click">
                     <Grid>
                         <Image Source="/Assets/Online Match.png" Margin="-10,-17,10,17"/>
                         <TextBlock Text="ONLINE MATCH" 
@@ -85,7 +87,8 @@
                 <Button x:Name="Collection"
                         Background="Transparent"
                         FontFamily="Bookman Old Style" 
-                        FontSize="96">
+                        FontSize="96"
+                        Click="Collection_Click">
                     <Grid>
                         <Image Source="/Assets/Collection.png"
                                Margin="-20,35,20,-35"/>
@@ -100,7 +103,8 @@
                 <Button x:Name="MyDeck"
                         Background="Transparent"
                         FontFamily="Bookman Old Style" 
-                        FontSize="96">
+                        FontSize="96"
+                        Click="MyDeck_Click">
                     <Grid>
                         <Image Source="/Assets/My deck.png" />
                         <TextBlock Text="My deck" 
@@ -130,7 +134,8 @@
                     Height="188" 
                     FontFamily="Bookman Old Style" 
                     FontSize="24" 
-                    HorizontalAlignment="Right">
+                    HorizontalAlignment="Right"
+                    Click="Profile_Click">
                     <Canvas>
                         <Image x:Name="ProfilePicture" 
                            Source="/Assets/Profile Pictures/1.png" 
@@ -201,7 +206,8 @@
                     Height="293" 
                     FontFamily="Bookman Old Style" 
                     FontSize="48" 
-                    HorizontalAlignment="Right">
+                    HorizontalAlignment="Right"
+                    Click="Store_Click">
                     <Canvas>
                         <Image Source="/Assets/Store.png" 
                            Height="270" Width="487" 
@@ -244,7 +250,8 @@
                     Height="92" 
                     FontFamily="Bookman Old Style" 
                     FontSize="48" 
-                    VerticalAlignment="Bottom">
+                    VerticalAlignment="Bottom"
+                    Click="Settings_Click">
                     <Image Source="/Assets/Settings.png" Margin="-19,-15,-17,-8" />
                 </Button>
                 <Button x:Name="Mail"
@@ -252,7 +259,8 @@
                     Width="86"
                     Height="96"  
                     FontFamily="Bookman Old Style" 
-                    FontSize="48" VerticalAlignment="Bottom">
+                    FontSize="48" VerticalAlignment="Bottom"
+                    Click="Mail_Click">
                     <Image Source="/Assets/Mail.png" 
                        Margin="-9,-8,-11,-13"/>
                 </Button>

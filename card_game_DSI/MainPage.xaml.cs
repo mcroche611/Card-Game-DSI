@@ -37,5 +37,53 @@ namespace card_game_DSI
         {
             Frame.Navigate(typeof(Friends));
         }
+
+        private void Campaign_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Map));
+
+        }
+
+        private void OnlineMatch_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Board));
+
+        }
+
+        private void Collection_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Collection));
+
+        }
+
+        private void MyDeck_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MyDeck));
+
+        }
+
+        private void Profile_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Profile));
+
+        }
+
+        private void Store_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Store));
+
+        }
+
+        private void Mail_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Mail));
+
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Settings));
+
+        }
     }
 }
