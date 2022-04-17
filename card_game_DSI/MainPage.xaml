@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="7*"/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!--Lianas-->
@@ -35,145 +35,104 @@
                Width="134"/>
 
         <!--Botones principales-->
-        <StackPanel Orientation="Horizontal" 
+        <Viewbox>
+            <StackPanel Orientation="Horizontal" 
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Bottom" 
                     IsDoubleTapEnabled="False" 
                     IsHoldingEnabled="False" 
                     IsRightTapEnabled="False">
-            <Button x:Name="Campaign"
-                    Background="Transparent"
-                    Width="459"
-                    Height="668" 
-                    FontFamily="Forte" 
-                    FontSize="48">
-                <Canvas>
-                    <Image Source="/Assets/Campaign.png" 
-                           Height="683" 
-                           Width="465" 
-                           Canvas.Left="-240" 
-                           Canvas.Top="-332"/>
-                    <TextBlock Text="CAMPAIGN" 
-                               Canvas.Left="-127" 
-                               Canvas.Top="157" 
-                               HorizontalAlignment="Center" 
-                               VerticalAlignment="Center" 
-                               TextAlignment="Center" 
-                               TextWrapping="Wrap" 
-                               IsDoubleTapEnabled="False" 
-                               IsHoldingEnabled="False" 
-                               IsRightTapEnabled="False" 
-                               IsTapEnabled="False"/>
-                </Canvas>
-            </Button>
-            <Button x:Name="OnlineMatch"
-                    Background="Transparent"
-                    Width="533"
-                    Height="668" 
-                    FontFamily="Forte" 
-                    FontSize="48">
-                <Canvas>
-                    <Image Source="/Assets/Online Match.png" 
-                           Height="683" Width="539" 
-                           Canvas.Left="-270" Canvas.Top="-334" 
-                           HorizontalAlignment="Center" 
-                           VerticalAlignment="Top"/>
-                    <TextBlock Text="ONLINE MATCH" 
-                               TextWrapping="Wrap"
-                               Canvas.Top="110"
-                               Canvas.Left="-184" 
-                               HorizontalAlignment="Left" 
-                               VerticalAlignment="Top" 
-                               TextAlignment="Center" 
-                               IsDoubleTapEnabled="False" 
-                               IsHoldingEnabled="False" 
-                               IsRightTapEnabled="False" 
-                               IsTapEnabled="False" 
-                               Width="296" />
-                </Canvas>
-            </Button>
-        </StackPanel>
+                <Button x:Name="Campaign"
+                        Background="Transparent"
+                        FontFamily="Forte" 
+                        FontSize="96">
+                    <Grid>
+                        <Image Source="/Assets/Campaign.png"/>
+                        <TextBlock Text="CAMPAIGN" 
+                                   HorizontalAlignment="Left" 
+                                   VerticalAlignment="Top" 
+                                   TextAlignment="Center" 
+                                   TextWrapping="Wrap"
+                                   Margin="277,983,0,0"/>
+                    </Grid>
+                </Button>
+                <Button x:Name="OnlineMatch"
+                        Background="Transparent"
+                        FontFamily="Forte" 
+                        FontSize="96" Padding="0,0,0,0">
+                    <Grid>
+                        <Image Source="/Assets/Online Match.png" Margin="-10,-17,10,17"/>
+                        <TextBlock Text="ONLINE MATCH" 
+                                   HorizontalAlignment="Left" 
+                                   VerticalAlignment="Bottom" 
+                                   TextAlignment="Center" 
+                                   TextWrapping="Wrap"  
+                                   Margin="244,0,0,258"
+                                   Width="588"/>
+                    </Grid>
+                </Button>
+            </StackPanel>
+        </Viewbox>
 
         <!--Botones de creación de mazo-->
-        <StackPanel Orientation="Horizontal" 
-                    HorizontalAlignment="Left" 
-                    VerticalAlignment="Bottom" 
-                    IsDoubleTapEnabled="False" 
-                    IsHoldingEnabled="False" 
-                    IsRightTapEnabled="False"
-                    Grid.Row="1">
-            <Button x:Name="Collection"
-                    Background="Transparent"
-                    Width="350"
-                    Height="296" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48">
-                <Canvas>
-                    <Image Source="/Assets/Collection.png" 
-                           Height="296" 
-                           Width="348" 
-                           Canvas.Left="-174" 
-                           Canvas.Top="-148" 
-                           HorizontalAlignment="Center" 
-                           VerticalAlignment="Center"/>
-                    <TextBlock Text="Collection" 
-                               Canvas.Left="-144" 
-                               Canvas.Top="51" 
-                               HorizontalAlignment="Left" 
-                               VerticalAlignment="Top" 
-                               TextAlignment="Center" 
-                               TextWrapping="Wrap" 
-                               IsDoubleTapEnabled="False" 
-                               IsHoldingEnabled="False" 
-                               IsRightTapEnabled="False" 
-                               IsTapEnabled="False"/>
-                </Canvas>
-            </Button>
-            <Button x:Name="MyDeck"
-                    Background="Transparent"
-                    Width="860"
-                    Height="293" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48">
-                <Canvas>
-                    <Image Source="/Assets/My deck.png" 
-                           Height="262" Width="823" 
-                           Canvas.Left="-402" 
-                           Canvas.Top="-114" 
-                           HorizontalAlignment="Left" 
-                           VerticalAlignment="Top"/>
-                    <TextBlock Text="My deck" 
-                               TextWrapping="Wrap"
-                               Canvas.Top="44"
-                               Canvas.Left="-151" 
-                               HorizontalAlignment="Center" 
-                               VerticalAlignment="Top" 
-                               TextAlignment="Center" 
-                               IsDoubleTapEnabled="False" 
-                               IsHoldingEnabled="False" 
-                               IsRightTapEnabled="False" 
-                               IsTapEnabled="False" 
-                               Width="296" />
-                </Canvas>
-            </Button>
-        </StackPanel>
+        <Viewbox Grid.Row="1" 
+                 VerticalAlignment="Bottom" 
+                 HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal"  
+                        IsDoubleTapEnabled="False" 
+                        IsHoldingEnabled="False" 
+                        IsRightTapEnabled="False" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                <Button x:Name="Collection"
+                        Background="Transparent"
+                        FontFamily="Bookman Old Style" 
+                        FontSize="96">
+                    <Grid>
+                        <Image Source="/Assets/Collection.png"
+                               Margin="-20,35,20,-35"/>
+                        <TextBlock Text="Collection"  
+                                   HorizontalAlignment="Left" 
+                                   VerticalAlignment="Bottom" 
+                                   TextAlignment="Center" 
+                                   TextWrapping="Wrap"  
+                                   Margin="65,0,0,143"/>
+                    </Grid>
+                </Button>
+                <Button x:Name="MyDeck"
+                        Background="Transparent"
+                        FontFamily="Bookman Old Style" 
+                        FontSize="96">
+                    <Grid>
+                        <Image Source="/Assets/My deck.png" />
+                        <TextBlock Text="My deck" 
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Left" 
+                                   VerticalAlignment="Top" 
+                                   TextAlignment="Center" 
+                                   Margin="688,355,0,0" />
+                    </Grid>
+                </Button>
+            </StackPanel>
+        </Viewbox>
 
         <!--Botones online-->
-        <StackPanel HorizontalAlignment="Right" 
+        <Viewbox Grid.Column="1"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Top">
+            <StackPanel HorizontalAlignment="Right" 
                     VerticalAlignment="Top" 
                     IsDoubleTapEnabled="False" 
                     IsHoldingEnabled="False" 
                     IsRightTapEnabled="False"
                     Grid.Column="1">
-            <Button x:Name="Profile"
+                <Button x:Name="Profile"
                     Background="Transparent"
                     Width="431"
                     Height="188" 
                     FontFamily="Bookman Old Style" 
                     FontSize="24" 
                     HorizontalAlignment="Right">
-                <Canvas>
-                    <Image x:Name="ProfilePicture" 
+                    <Canvas>
+                        <Image x:Name="ProfilePicture" 
                            Source="/Assets/Profile Pictures/1.png" 
                            Height="110" 
                            Width="110" 
@@ -181,7 +140,7 @@
                            Canvas.Top="-49" 
                            HorizontalAlignment="Left" 
                            VerticalAlignment="Top"/>
-                    <TextBlock x:Name="Username" 
+                        <TextBlock x:Name="Username" 
                                Text="Kaycee21" 
                                Canvas.Left="-132" 
                                Canvas.Top="-36" 
@@ -194,7 +153,7 @@
                                IsTapEnabled="False" 
                                FontSize="36" 
                                Foreground="Black"/>
-                    <TextBlock x:Name="Status" 
+                        <TextBlock x:Name="Status" 
                                Text="Online" 
                                Canvas.Top="20" 
                                HorizontalAlignment="Left" 
@@ -205,9 +164,9 @@
                                IsRightTapEnabled="False" 
                                IsTapEnabled="False" 
                                Foreground="#FF109A0E" Canvas.Left="-43"/>
-                </Canvas>
-            </Button>
-            <Button x:Name="Classification"
+                    </Canvas>
+                </Button>
+                <Button x:Name="Classification"
                     Background="Transparent"
                     Width="490"
                     Height="248" 
@@ -216,14 +175,14 @@
                     HorizontalAlignment="Right" 
                     Margin="0,40,0,0"
                     Click="Classification_Click">
-                <Canvas>
-                    <Image Source="/Assets/Classification.png" 
+                    <Canvas>
+                        <Image Source="/Assets/Classification.png" 
                            Height="270" Width="487" 
                            Canvas.Left="-244" 
                            Canvas.Top="-135" 
                            HorizontalAlignment="Center" 
                            VerticalAlignment="Center"/>
-                    <TextBlock Text="Classification" 
+                        <TextBlock Text="Classification" 
                                Canvas.Top="-18"
                                Canvas.Left="-135" 
                                HorizontalAlignment="Left" 
@@ -234,23 +193,23 @@
                                IsRightTapEnabled="False" 
                                IsTapEnabled="False" 
                                Width="342" />
-                </Canvas>
-            </Button>
-            <Button x:Name="Store"
+                    </Canvas>
+                </Button>
+                <Button x:Name="Store"
                     Background="Transparent"
                     Width="490"
                     Height="293" 
                     FontFamily="Bookman Old Style" 
                     FontSize="48" 
                     HorizontalAlignment="Right">
-                <Canvas>
-                    <Image Source="/Assets/Store.png" 
+                    <Canvas>
+                        <Image Source="/Assets/Store.png" 
                            Height="270" Width="487" 
                            Canvas.Left="-244" 
                            Canvas.Top="-135" 
                            HorizontalAlignment="Center" 
                            VerticalAlignment="Center"/>
-                    <TextBlock Text="Store" 
+                        <TextBlock Text="Store" 
                                Canvas.Top="-28"
                                Canvas.Left="-139" 
                                HorizontalAlignment="Left" 
@@ -261,12 +220,17 @@
                                IsRightTapEnabled="False" 
                                IsTapEnabled="False" 
                                Width="342" />
-                </Canvas>
-            </Button>
-        </StackPanel>
+                    </Canvas>
+                </Button>
+            </StackPanel>
+        </Viewbox>
 
         <!--Botones adicionales-->
-        <StackPanel Orientation="Horizontal"
+        <Viewbox Grid.Column="1"
+                 Grid.Row="1"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Right" 
                     VerticalAlignment="Bottom" 
                     IsDoubleTapEnabled="False" 
@@ -274,25 +238,25 @@
                     IsRightTapEnabled="False"
                     Grid.Column="1"
                     Grid.Row="1">
-            <Button x:Name="Settings"
+                <Button x:Name="Settings"
                     Background="Transparent"
                     Width="103"
                     Height="92" 
                     FontFamily="Bookman Old Style" 
                     FontSize="48" 
                     VerticalAlignment="Bottom">
-                <Image Source="/Assets/Settings.png" Margin="-19,-15,-17,-8" />
-            </Button>
-            <Button x:Name="Mail"
+                    <Image Source="/Assets/Settings.png" Margin="-19,-15,-17,-8" />
+                </Button>
+                <Button x:Name="Mail"
                     Background="Transparent"
                     Width="86"
                     Height="96"  
                     FontFamily="Bookman Old Style" 
                     FontSize="48" VerticalAlignment="Bottom">
-                <Image Source="/Assets/Mail.png" 
+                    <Image Source="/Assets/Mail.png" 
                        Margin="-9,-8,-11,-13"/>
-            </Button>
-            <Button x:Name="Friends"
+                </Button>
+                <Button x:Name="Friends"
                     Background="Transparent"
                     Width="134"
                     Height="94" 
@@ -300,11 +264,12 @@
                     FontSize="48" 
                     VerticalAlignment="Bottom"
                     Click="Friends_Click">
-                <Image Source="/Assets/Friends.png"  
+                    <Image Source="/Assets/Friends.png"  
                        Stretch="UniformToFill" 
                        Margin="-10,-5,-11,-8" 
                        VerticalAlignment="Bottom"/>
-            </Button>
-        </StackPanel>
+                </Button>
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>
