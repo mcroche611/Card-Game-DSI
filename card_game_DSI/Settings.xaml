@@ -44,35 +44,77 @@
 
         <Viewbox HorizontalAlignment="Stretch"
                  VerticalAlignment="Stretch"
-                 Grid.ColumnSpan="4"
-                 Grid.RowSpan="7"
-                 Grid.Row="1">
-            <Grid Background="#FF00717C">
+                 Grid.ColumnSpan="2"
+                 Grid.RowSpan="4"
+                 Grid.Row="1"
+                 Grid.Column="1">
+            <StackPanel>
+
+                <Grid HorizontalAlignment="Stretch" Background="#FF00717C"  BorderBrush="#FF008E96" BorderThickness="1">
+                    <TextBlock
+                    Text=" OPCIONES "
+                    FontSize="3"
+                    Foreground="White"
+                    FontFamily="Arial"
+                    Margin="85,1,46,-1"
+                    Width="50"
+                    Height="6"/>
+
+                </Grid>
+
+                <Grid HorizontalAlignment="Stretch" Background="#FF00717C">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal" BorderBrush="#FF008E86" BorderThickness="1,0,1,1" Grid.ColumnSpan="2">
+                        <TextBlock
+                    Text=" GRÁFICOS "
+                    FontSize="3"
+                    Foreground="White"
+                    FontFamily="Arial"
+                    Margin="40,0,0,0"
+                    Width="50"
+                    Height="4"/>
+                        <TextBlock
+                    Text=" SONIDO "
+                    FontSize="3"
+                    Foreground="White"
+                    FontFamily="Arial"
+                    Margin="40,0,0,0"
+                    Width="50"
+                    Height="4"/>
+                    </StackPanel>
+
+
+                </Grid>
+            </StackPanel>
+
+            <!--<Grid Background="#FF00717C">
 
                 <StackPanel HorizontalAlignment="Center" Background="#FF007C7C">
 
-                    <StackPanel HorizontalAlignment="Stretch" Background="Red"  Orientation="Horizontal"
-                    Grid.Row="0">
-
+                    
                         <TextBlock 
                     HorizontalAlignment="Center"
                     Text=" OPCIONES "
                     TextAlignment="Center"
                     FontSize="1"
                     Foreground="White"
-                    FontFamily="Arial" Margin="0,0,0,0"/> 
+                    FontFamily="Arial" Margin="0,0,0,0"/>
 
-                    </StackPanel>
 
                     <StackPanel HorizontalAlignment="Stretch" Background="Orange"  Orientation="Horizontal"
                     Grid.Row="0">
-
-                        <TextBlock Width="50"
+                        <Grid BorderBrush="Black" BorderThickness="1">
+                            <TextBlock Width="23"
                 HorizontalAlignment="Center"
                 Text=" OPCIONES "
                 FontSize="1"
                 Foreground="Black"
-                FontFamily="Arial"/>
+                FontFamily="Arial" Height="2" Margin="0,0,0,6"/>
+                        </Grid>
+
 
                         <TextBlock 
                 HorizontalAlignment="Center"
@@ -175,7 +217,7 @@
                     </StackPanel>
                 </StackPanel>
 
-            </Grid>
+            </Grid>-->
 
         </Viewbox>
 
