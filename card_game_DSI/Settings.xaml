@@ -53,7 +53,7 @@
                 <Grid HorizontalAlignment="Stretch" Background="#FF00717C"  BorderBrush="#FF008E96" BorderThickness="1">
                     <TextBlock
                     Text=" OPCIONES "
-                    FontSize="3"
+                    FontSize="4"
                     Foreground="White"
                     FontFamily="Arial"
                     Margin="85,1,46,-1"
@@ -63,10 +63,7 @@
                 </Grid>
 
                 <Grid HorizontalAlignment="Stretch" Background="#FF00717C">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="5*"/>
-                    </Grid.ColumnDefinitions>
+
                     <StackPanel Orientation="Horizontal" BorderBrush="#FF008E86" BorderThickness="1,0,1,1" Grid.ColumnSpan="2">
                         <TextBlock
                     Text=" GRÁFICOS "
@@ -88,6 +85,41 @@
 
 
                 </Grid>
+                <Grid HorizontalAlignment="Stretch" Background="#FF81CED6" Height="50" BorderBrush="#FF008E86" BorderThickness="1,0,1,1">
+
+                    <Grid 
+                          Background="#FF00717C"
+                          BorderBrush="#FF008E86" 
+                          Height="10"
+                          Width="70"
+                          Margin="-92,0,0,25"
+                          BorderThickness="1,1,1,1"/>
+                    <TextBlock
+                        Text=" Resolución "
+                        FontSize="3"
+                        Foreground="White"
+                        FontFamily="Arial"
+                        Margin="21,10,112,36"/>
+                    <Grid Background="#FF00717C"
+                          BorderBrush="#FF008E86" 
+                          Height="20"
+                          Width="70"
+                          Margin="-92,0,0,-15"
+                          BorderThickness="1,1,1,1">
+
+
+
+                        <!--<TextBlock
+                        Text=" Pantalla completa "
+                        FontSize="3"
+                        Foreground="White"
+                        FontFamily="Arial"
+                        Margin="0,0,0,0"/>-->
+                    </Grid>
+                    
+                </Grid>
+
+
             </StackPanel>
 
             <!--<Grid Background="#FF00717C">
@@ -220,7 +252,18 @@
             </Grid>-->
 
         </Viewbox>
+        <Viewbox>
+            <CheckBox Height="28" Width="250" Margin="100,220,0,0" Grid.Column="1" VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5" Grid.Row="3" >
 
+                <TextBlock
+                            Text=" Pantalla completa "
+                            FontSize="22"
+                            Foreground="White"
+                            FontFamily="Arial" Width="200"
+                />
+            </CheckBox>
+        </Viewbox>
+        
 
     </Grid>
 </Page>
