@@ -10,70 +10,175 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" MinHeight="87.2" />
-            <RowDefinition Height="Auto" MinHeight="92.8"/>
-            <RowDefinition Height="Auto" MinHeight="400" />
-            <RowDefinition Height="Auto" MinHeight="52.8"/>
-            <RowDefinition Height="Auto" MinHeight="302.4"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="500*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="50*"/>
+
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="500*"/>
+            <ColumnDefinition Width="500*"/>
+            <ColumnDefinition Width="50*"/>
 
         </Grid.ColumnDefinitions>
 
-        <Border Grid.ColumnSpan="2" Background = "DarkCyan" Margin="0,0,0,63" Grid.RowSpan="2"/>
-        <Border Grid.ColumnSpan="2" Background="DarkCyan" RenderTransformOrigin="0.498,0.625" Margin="0,87,0,0" Grid.RowSpan="2"/>
-        <Border Grid.Row="2" Grid.ColumnSpan="2" Background="PaleTurquoise" RenderTransformOrigin="0.498,0.625"/>
-        <Border Grid.Row="3" Grid.ColumnSpan="2" Background="DarkCyan" RenderTransformOrigin="0.498,0.625" Margin="0,0,0,302" Grid.RowSpan="2"/>
-        <Border Grid.Row="4" Grid.ColumnSpan="2" Background="PaleTurquoise" RenderTransformOrigin="0.498,0.625" Margin="0,0,0,-70"/>
+        <!--<Viewbox Grid.ColumnSpan="3" Grid.Row="1" Margin="0,0,0,0">
+            <Grid Background="DarkCyan" BorderBrush="#FF3BA68D" BorderThickness="0.5,1,1,1" Width="332" HorizontalAlignment="Center" VerticalAlignment="Top" Height="15">
+                <TextBlock 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="9"
+                Foreground="White"
+                FontFamily="Arial"/>
 
-        <!--Las lineas divisorias-->
-        <Rectangle Width="1" Height="400" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="2" Fill="Black"  Margin="749,0,0,0"/>
-        <Rectangle Width="1" Height="400" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="2" Fill="Black"  Margin="750,0,0,0" Grid.ColumnSpan="2"/>
 
-        <Rectangle Width="1600" Height="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="1" Fill="Black"  Margin="-50,0,0,0"/>
-        <Rectangle Width="1600" Height="2" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left" Fill="Black"  Margin="-50,87,0,0" Grid.RowSpan="2"/>
+            </Grid>
+        </Viewbox>-->
 
-        <Rectangle Width="1600" Height="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="3" Fill="Black"  Margin="-50,0,0,302" Grid.RowSpan="2"/>
-        <Rectangle Width="1600" Height="2" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="3" Fill="Black"  Margin="-50,0,0,0"/>
+        <Viewbox HorizontalAlignment="Stretch"
+                 VerticalAlignment="Stretch"
+                 Grid.ColumnSpan="4"
+                 Grid.RowSpan="7"
+                 Grid.Row="1">
+            <Grid Background="#FF00717C">
 
-        <!--Los titulos-->
-        <TextBlock Foreground="White" FontSize="60" FontFamily="Consolas" VerticalAlignment="Center"  HorizontalAlignment="Left" Text="OPCIONES" Grid.ColumnSpan="2" Margin="608,0,0,0" Height="80" Width="284"/>
-        <TextBlock Foreground="White" FontSize="40" FontFamily="Consolas" VerticalAlignment="Center"  HorizontalAlignment="Left" Text="GRÁFICOS" Grid.ColumnSpan="1" Grid.Row="1" Width="260" Margin="295,0,0,0" Height="53"/>
-        <TextBlock Foreground="White" FontSize="40" FontFamily="Consolas" VerticalAlignment="Center"  HorizontalAlignment="Center" Text="SONIDO" Grid.Column="1" Grid.Row="1" Height="53" Width="150"/>
-        <TextBlock Foreground="White" FontSize="40" FontFamily="Consolas" VerticalAlignment="Center"  HorizontalAlignment="Left" Text="CONTROLES Y OTROS" Grid.ColumnSpan="2" Grid.Row="3" Margin="557,0,0,0" Height="53" Width="387"/>
+                <StackPanel HorizontalAlignment="Center" Background="#FF007C7C">
 
-        <!--Los cuadrados y textos de arriba a la izquierda-->
-        <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <Rectangle Width="600" Height="100" Fill="DarkCyan"  Margin="0,40,0,0"/>
-            <Rectangle Width="600" Height="200" Fill="DarkCyan"  Margin="0,20,0,0"/>
-        </StackPanel>
+                    <StackPanel HorizontalAlignment="Stretch" Background="Red"  Orientation="Horizontal"
+                    Grid.Row="0">
 
-        <!--Los cuadrados y textos de arriba a la derecha-->
-        <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1">
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,30,0,0"/>
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,20,0,0"/>
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,20,0,0"/>
+                        <TextBlock 
+                    HorizontalAlignment="Center"
+                    Text=" OPCIONES "
+                    TextAlignment="Center"
+                    FontSize="1"
+                    Foreground="White"
+                    FontFamily="Arial" Margin="0,0,0,0"/> 
 
-        </StackPanel>
+                    </StackPanel>
 
-        <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1">
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,30,0,0"/>
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,20,0,0"/>
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,20,0,0"/>
+                    <StackPanel HorizontalAlignment="Stretch" Background="Orange"  Orientation="Horizontal"
+                    Grid.Row="0">
 
-        </StackPanel>
+                        <TextBlock Width="50"
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
 
-        <!--Los cuadrados y textos de abajo-->
-        <StackPanel Grid.Row="4" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-            <Rectangle Width="500" Height="100" Fill="DarkCyan"  Margin="0,50,0,0"/>
+                        <TextBlock 
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
 
-        </StackPanel>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Stretch" Background="Yellow"  Orientation="Horizontal"
+                    Grid.Row="0">
 
-        <Button Click="BackButton_OnClick" Margin="15,0,0,0" Height="61" Background="DarkCyan" BorderBrush="Aquamarine" Foreground="White">
-            <SymbolIcon Symbol="Back" VerticalAlignment="Center" Width="57" Height="42"/>
-        </Button>
+                        <TextBlock Width="50"
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
+
+                        <TextBlock 
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
+
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Stretch" Background="LightGreen"  Orientation="Horizontal"
+                    Grid.Row="0">
+
+                        <TextBlock Width="50"
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
+
+                        <TextBlock 
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
+
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Stretch" Background="LightCyan"  Orientation="Horizontal"
+                    Grid.Row="0">
+
+                        <TextBlock Width="50"
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
+
+                        <TextBlock 
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
+
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Stretch" Background="CornflowerBlue"  Orientation="Horizontal"
+                    Grid.Row="0">
+
+                        <TextBlock Width="50"
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
+
+                        <TextBlock 
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
+
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Stretch" Background="MediumPurple"  Orientation="Horizontal"
+                    Grid.Row="0">
+
+                        <TextBlock Width="50"
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
+
+                        <TextBlock 
+                HorizontalAlignment="Center"
+                Text=" OPCIONES "
+                FontSize="1"
+                Foreground="Black"
+                FontFamily="Arial"/>
+
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+
+        </Viewbox>
+
+
     </Grid>
 </Page>
