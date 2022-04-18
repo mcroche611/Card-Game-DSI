@@ -37,11 +37,11 @@
         <!--Botones principales-->
         <Viewbox>
             <StackPanel Orientation="Horizontal" 
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Bottom" 
-                    IsDoubleTapEnabled="False" 
-                    IsHoldingEnabled="False" 
-                    IsRightTapEnabled="False">
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Bottom" 
+                        IsDoubleTapEnabled="False" 
+                        IsHoldingEnabled="False" 
+                        IsRightTapEnabled="False">
                 <Button x:Name="Campaign"
                         Background="Transparent"
                         FontFamily="Forte" 
@@ -106,7 +106,8 @@
                         FontSize="96"
                         Click="MyDeck_Click">
                     <Grid>
-                        <Image Source="/Assets/My deck.png" />
+                        <Image Source="/Assets/My deck.png" 
+                               Margin="0,0,0,-5" />
                         <TextBlock Text="My deck" 
                                    TextWrapping="Wrap"
                                    HorizontalAlignment="Left" 
@@ -123,110 +124,103 @@
                  HorizontalAlignment="Right"
                  VerticalAlignment="Top">
             <StackPanel HorizontalAlignment="Right" 
-                    VerticalAlignment="Top" 
-                    IsDoubleTapEnabled="False" 
-                    IsHoldingEnabled="False" 
-                    IsRightTapEnabled="False"
-                    Grid.Column="1">
+                        VerticalAlignment="Top" 
+                        IsDoubleTapEnabled="False" 
+                        IsHoldingEnabled="False" 
+                        IsRightTapEnabled="False"
+                        Grid.Column="1">
                 <Button x:Name="Profile"
-                    Background="Transparent"
-                    Width="431"
-                    Height="188" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="24" 
-                    HorizontalAlignment="Right"
-                    Click="Profile_Click">
-                    <Canvas>
-                        <Image x:Name="ProfilePicture" 
-                           Source="/Assets/Profile Pictures/1.png" 
-                           Height="110" 
-                           Width="110" 
-                           Canvas.Left="61" 
-                           Canvas.Top="-49" 
-                           HorizontalAlignment="Left" 
-                           VerticalAlignment="Top"/>
-                        <TextBlock x:Name="Username" 
-                               Text="Kaycee21" 
-                               Canvas.Left="-132" 
-                               Canvas.Top="-36" 
-                               HorizontalAlignment="Left" 
-                               VerticalAlignment="Top" 
-                               TextAlignment="Center" 
-                               IsDoubleTapEnabled="False" 
-                               IsHoldingEnabled="False" 
-                               IsRightTapEnabled="False" 
-                               IsTapEnabled="False" 
-                               FontSize="36" 
-                               Foreground="Black"/>
-                        <TextBlock x:Name="Status" 
-                               Text="Online" 
-                               Canvas.Top="20" 
-                               HorizontalAlignment="Left" 
-                               VerticalAlignment="Top" 
-                               TextAlignment="Center"
-                               IsDoubleTapEnabled="False" 
-                               IsHoldingEnabled="False" 
-                               IsRightTapEnabled="False" 
-                               IsTapEnabled="False" 
-                               Foreground="#FF109A0E" Canvas.Left="-43"/>
-                    </Canvas>
+                        Background="Transparent"
+                        Width="431"
+                        Height="188" 
+                        FontFamily="Bookman Old Style" 
+                        FontSize="24" 
+                        HorizontalAlignment="Right"
+                        Click="Profile_Click">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock x:Name="Username" 
+                                           Text="{x:Bind username, Mode=OneWay}" 
+                                           HorizontalAlignment="Right" 
+                                           VerticalAlignment="Top" 
+                                           TextAlignment="Center" 
+                                           IsDoubleTapEnabled="False" 
+                                           IsHoldingEnabled="False" 
+                                           IsRightTapEnabled="False" 
+                                           IsTapEnabled="False" 
+                                           FontSize="36" 
+                                           Foreground="Black"/>
+                                <TextBlock x:Name="Status" 
+                                           Text="Online" 
+                                           HorizontalAlignment="Right" 
+                                           VerticalAlignment="Top" 
+                                           TextAlignment="Center"
+                                           IsDoubleTapEnabled="False" 
+                                           IsHoldingEnabled="False" 
+                                           IsRightTapEnabled="False" 
+                                           IsTapEnabled="False" 
+                                           Foreground="#FF109A0E" 
+                                           Margin="0,10,0,0"/>
+                            </StackPanel>
+                            <Image x:Name="ProfilePicture" 
+                                   Source="/Assets/Profile Pictures/1.png" 
+                                   Height="110" 
+                                   Width="110" 
+                                   HorizontalAlignment="Left" 
+                                   VerticalAlignment="Top" 
+                                   Margin="30,0,0,0"/>
+                        </StackPanel>
+                    </Grid>
                 </Button>
                 <Button x:Name="Classification"
-                    Background="Transparent"
-                    Width="490"
-                    Height="248" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    HorizontalAlignment="Right" 
-                    Margin="0,40,0,0"
-                    Click="Classification_Click">
-                    <Canvas>
+                        Background="Transparent"
+                        FontFamily="Bookman Old Style" 
+                        FontSize="48" 
+                        HorizontalAlignment="Right" 
+                        Margin="0,40,0,0"
+                        Click="Classification_Click">
+                    <Grid>
                         <Image Source="/Assets/Classification.png" 
-                           Height="270" Width="487" 
-                           Canvas.Left="-244" 
-                           Canvas.Top="-135" 
-                           HorizontalAlignment="Center" 
-                           VerticalAlignment="Center"/>
+                               Height="270" 
+                               Width="487" 
+                               HorizontalAlignment="Right" 
+                               VerticalAlignment="Center"
+                               Margin="0,0,-10,0"/>
                         <TextBlock Text="Classification" 
-                               Canvas.Top="-18"
-                               Canvas.Left="-135" 
-                               HorizontalAlignment="Left" 
-                               VerticalAlignment="Top" 
-                               TextAlignment="Center" 
-                               IsDoubleTapEnabled="False" 
-                               IsHoldingEnabled="False" 
-                               IsRightTapEnabled="False" 
-                               IsTapEnabled="False" 
-                               Width="342" />
-                    </Canvas>
+                                   HorizontalAlignment="Left" 
+                                   VerticalAlignment="Center" 
+                                   TextAlignment="Center" 
+                                   IsDoubleTapEnabled="False" 
+                                   IsHoldingEnabled="False" 
+                                   IsRightTapEnabled="False" 
+                                   IsTapEnabled="False" 
+                                   Margin="120,0,0,0"/>
+                    </Grid>
                 </Button>
                 <Button x:Name="Store"
-                    Background="Transparent"
-                    Width="490"
-                    Height="293" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    HorizontalAlignment="Right"
-                    Click="Store_Click">
-                    <Canvas>
+                        Background="Transparent"
+                        FontFamily="Bookman Old Style" 
+                        FontSize="48" 
+                        HorizontalAlignment="Right"
+                        Click="Store_Click">
+                    <Grid>
                         <Image Source="/Assets/Store.png" 
-                           Height="270" Width="487" 
-                           Canvas.Left="-244" 
-                           Canvas.Top="-135" 
-                           HorizontalAlignment="Center" 
-                           VerticalAlignment="Center"/>
-                        <TextBlock Text="Store" 
-                               Canvas.Top="-28"
-                               Canvas.Left="-139" 
-                               HorizontalAlignment="Left" 
+                               Height="270" 
+                               Width="487" 
+                               HorizontalAlignment="Right" 
                                VerticalAlignment="Top" 
-                               TextAlignment="Center" 
-                               IsDoubleTapEnabled="False" 
-                               IsHoldingEnabled="False" 
-                               IsRightTapEnabled="False" 
-                               IsTapEnabled="False" 
-                               Width="342" />
-                    </Canvas>
+                               Margin="0,0,-10,0"/>
+                        <TextBlock Text="Store"  
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center" 
+                                   TextAlignment="Center" 
+                                   IsDoubleTapEnabled="False" 
+                                   IsHoldingEnabled="False" 
+                                   IsRightTapEnabled="False" 
+                                   IsTapEnabled="False"
+                                   Margin="98,0,0,0"/>
+                    </Grid>
                 </Button>
             </StackPanel>
         </Viewbox>
@@ -237,45 +231,30 @@
                  HorizontalAlignment="Right"
                  VerticalAlignment="Bottom">
             <StackPanel Orientation="Horizontal"
-                    HorizontalAlignment="Right" 
-                    VerticalAlignment="Bottom" 
-                    IsDoubleTapEnabled="False" 
-                    IsHoldingEnabled="False" 
-                    IsRightTapEnabled="False"
-                    Grid.Column="1"
-                    Grid.Row="1">
+                        HorizontalAlignment="Right" 
+                        VerticalAlignment="Bottom" 
+                        IsDoubleTapEnabled="False" 
+                        IsHoldingEnabled="False" 
+                        IsRightTapEnabled="False">
                 <Button x:Name="Settings"
-                    Background="Transparent"
-                    Width="103"
-                    Height="92" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom"
-                    Click="Settings_Click">
-                    <Image Source="/Assets/Settings.png" Margin="-19,-15,-17,-8" />
+                        Background="Transparent"
+                        Click="Settings_Click" 
+                        Margin="300,0,0,0">
+                    <Image Source="/Assets/Settings.png" 
+                           Margin="-19,-10,-12,-8" />
                 </Button>
                 <Button x:Name="Mail"
-                    Background="Transparent"
-                    Width="86"
-                    Height="96"  
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" VerticalAlignment="Bottom"
-                    Click="Mail_Click">
+                        Background="Transparent"
+                        VerticalAlignment="Bottom"
+                        Click="Mail_Click">
                     <Image Source="/Assets/Mail.png" 
-                       Margin="-9,-8,-11,-13"/>
+                           Margin="-9,-9,-11,-9"/>
                 </Button>
                 <Button x:Name="Friends"
-                    Background="Transparent"
-                    Width="134"
-                    Height="94" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom"
-                    Click="Friends_Click">
-                    <Image Source="/Assets/Friends.png"  
-                       Stretch="UniformToFill" 
-                       Margin="-10,-5,-11,-8" 
-                       VerticalAlignment="Bottom"/>
+                        Background="Transparent"
+                        Click="Friends_Click">
+                    <Image Source="/Assets/Friends.png" 
+                           Margin="-10,-5,-11,-14" />
                 </Button>
             </StackPanel>
         </Viewbox>

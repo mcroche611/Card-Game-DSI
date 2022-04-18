@@ -18,14 +18,17 @@ using Windows.UI.Xaml.Navigation;
 
 namespace card_game_DSI
 {
-    /// <summary>
-    /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
+        public string username { get; set; }
+        public string status { get; set; }
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            username = "Kaycee21";
+            status = "Hello card gamers!";
         }
 
         private void Classification_Click(object sender, RoutedEventArgs e)
@@ -41,49 +44,41 @@ namespace card_game_DSI
         private void Campaign_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Map));
-
         }
 
         private void OnlineMatch_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Board));
-
         }
 
         private void Collection_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Collection));
-
         }
 
         private void MyDeck_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MyDeck));
-
         }
 
         private void Profile_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Profile));
-
         }
 
         private void Store_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Store));
-
         }
 
         private void Mail_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Mail));
-
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Settings));
-
         }
     }
 }
