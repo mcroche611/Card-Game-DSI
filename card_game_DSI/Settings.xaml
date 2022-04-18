@@ -116,7 +116,7 @@
                         FontFamily="Arial"
                         Margin="0,0,0,0"/>-->
                     </Grid>
-                    
+
                 </Grid>
 
                 <Grid HorizontalAlignment="Stretch" Background="#FF00717C">
@@ -139,16 +139,52 @@
                           BorderBrush="#FF008E86" 
                           Height="10"
                           Width="70"
-                          Margin="-92,0,0,25"
-                          BorderThickness="1,1,1,1"/>
-                    <TextBlock
-                        Text=" Resolución "
+                          Margin="0,0,0,15"
+                          BorderThickness="1,1,1,1">
+                        <TextBlock
+                        Text=" Idioma "
                         FontSize="3"
                         Foreground="White"
                         FontFamily="Arial"
-                        Margin="21,10,112,36"/>
+                         Margin="10,2,0,0"/>
+
+
+                    </Grid>
+                    <Grid 
+                        
+                        Background="White"
+                        BorderBrush="#FF008E86" 
+                        Height="8"
+                        Width="28"
+                        Margin="-150,0,0,-15"   
+                        BorderThickness="1,1,1,1">
+
+                        <Button Click="Button_Click" 
+                                Content="RESTABLECER" 
+                                Height="39"
+                                Width="65" 
+                                FontSize="4"
+                                HorizontalAlignment="Center" 
+                                Background="White"
+                                Foreground="#FF00717C"/>
+
+
+                    </Grid>
+
+                    <!--<Grid Height="20" Width="200" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,-15">
+                            <Button x:Name="Restablecer"
+                            Background="White"
+                            FontFamily="Bookman Old Style" 
+                            FontSize="3"
+                            Content="Restablecer"
+                            Click="Restablecer_Click" Height="10" Width="19" Foreground="#FF00358E" Margin="10,0,0,0"/>
+
+                    </Grid>-->
+
+
 
                 </Grid>
+
             </StackPanel>
 
             <!--<Grid Background="#FF00717C">
@@ -298,9 +334,9 @@
                 />
                 </CheckBox>
             </Grid>
-            
+
         </Viewbox>
-        
+
 
     </Grid>
 </Page>

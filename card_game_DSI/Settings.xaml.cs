@@ -35,5 +35,15 @@ namespace card_game_DSI
                 Frame.GoBack();
             }
         }
+
+        private void Restablecer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
