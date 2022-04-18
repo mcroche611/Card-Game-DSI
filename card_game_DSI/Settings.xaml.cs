@@ -35,5 +35,10 @@ namespace card_game_DSI
                 Frame.GoBack();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

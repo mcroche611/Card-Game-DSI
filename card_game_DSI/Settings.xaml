@@ -8,72 +8,270 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="#abd2ab">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" MinHeight="87.2" />
-            <RowDefinition Height="Auto" MinHeight="92.8"/>
-            <RowDefinition Height="Auto" MinHeight="400" />
-            <RowDefinition Height="Auto" MinHeight="52.8"/>
-            <RowDefinition Height="Auto" MinHeight="302.4"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="5*"/>
+
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="500*"/>
+            <ColumnDefinition Width="500*"/>
+            <ColumnDefinition Width="50*"/>
 
         </Grid.ColumnDefinitions>
 
-        <Border Grid.ColumnSpan="2" Background = "DarkCyan" Margin="0,0,0,63" Grid.RowSpan="2"/>
-        <Border Grid.ColumnSpan="2" Background="DarkCyan" RenderTransformOrigin="0.498,0.625" Margin="0,87,0,0" Grid.RowSpan="2"/>
-        <Border Grid.Row="2" Grid.ColumnSpan="2" Background="PaleTurquoise" RenderTransformOrigin="0.498,0.625"/>
-        <Border Grid.Row="3" Grid.ColumnSpan="2" Background="DarkCyan" RenderTransformOrigin="0.498,0.625" Margin="0,0,0,302" Grid.RowSpan="2"/>
-        <Border Grid.Row="4" Grid.ColumnSpan="2" Background="PaleTurquoise" RenderTransformOrigin="0.498,0.625" Margin="0,0,0,-70"/>
 
-        <!--Las lineas divisorias-->
-        <Rectangle Width="1" Height="400" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="2" Fill="Black"  Margin="749,0,0,0"/>
-        <Rectangle Width="1" Height="400" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="2" Fill="Black"  Margin="750,0,0,0" Grid.ColumnSpan="2"/>
 
-        <Rectangle Width="1600" Height="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="1" Fill="Black"  Margin="-50,0,0,0"/>
-        <Rectangle Width="1600" Height="2" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left" Fill="Black"  Margin="-50,87,0,0" Grid.RowSpan="2"/>
+        <Viewbox HorizontalAlignment="Stretch"
+                 VerticalAlignment="Stretch"
+                 Grid.ColumnSpan="2"
+                 Grid.RowSpan="6"
+                 Grid.Row="1"
+                 Grid.Column="1">
+            <StackPanel>
 
-        <Rectangle Width="1600" Height="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="3" Fill="Black"  Margin="-50,0,0,302" Grid.RowSpan="2"/>
-        <Rectangle Width="1600" Height="2" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="3" Fill="Black"  Margin="-50,0,0,0"/>
+                <Grid HorizontalAlignment="Stretch" Background="#FF00717C"  BorderBrush="#FF008E96" BorderThickness="1">
+                    <TextBlock
+                    Text=" OPCIONES "
+                    FontSize="4"
+                    Foreground="White"
+                    FontFamily="Arial"
+                    FontWeight="Bold"
+                    Margin="85,1,46,-1"
+                    Width="50"
+                    Height="6"/>
 
-        <!--Los titulos-->
-        <TextBlock Foreground="White" FontSize="60" FontFamily="Consolas" VerticalAlignment="Center"  HorizontalAlignment="Left" Text="OPCIONES" Grid.ColumnSpan="2" Margin="608,0,0,0" Height="80" Width="284"/>
-        <TextBlock Foreground="White" FontSize="40" FontFamily="Consolas" VerticalAlignment="Center"  HorizontalAlignment="Left" Text="GRÁFICOS" Grid.ColumnSpan="1" Grid.Row="1" Width="260" Margin="295,0,0,0" Height="53"/>
-        <TextBlock Foreground="White" FontSize="40" FontFamily="Consolas" VerticalAlignment="Center"  HorizontalAlignment="Center" Text="SONIDO" Grid.Column="1" Grid.Row="1" Height="53" Width="150"/>
-        <TextBlock Foreground="White" FontSize="40" FontFamily="Consolas" VerticalAlignment="Center"  HorizontalAlignment="Left" Text="CONTROLES Y OTROS" Grid.ColumnSpan="2" Grid.Row="3" Margin="557,0,0,0" Height="53" Width="387"/>
+                </Grid>
 
-        <!--Los cuadrados y textos de arriba a la izquierda-->
-        <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <Rectangle Width="600" Height="100" Fill="DarkCyan"  Margin="0,40,0,0"/>
-            <Rectangle Width="600" Height="200" Fill="DarkCyan"  Margin="0,20,0,0"/>
-        </StackPanel>
+                <Grid HorizontalAlignment="Stretch" Background="#FF00717C">
 
-        <!--Los cuadrados y textos de arriba a la derecha-->
-        <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1">
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,30,0,0"/>
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,20,0,0"/>
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,20,0,0"/>
+                    <StackPanel Orientation="Horizontal" BorderBrush="#FF008E86" BorderThickness="1,0,1,1" Grid.ColumnSpan="2">
+                        <TextBlock
+                    Text=" GRÁFICOS "
+                    FontSize="3"
+                    Foreground="White"
+                    FontFamily="Arial"
+                    FontWeight="Bold"
+                    Margin="40,0,0,0"
+                    Width="50"
+                    Height="4"/>
+                        <TextBlock
+                    Text=" SONIDO "
+                    FontSize="3"
+                    Foreground="White"
+                    FontFamily="Arial"
+                    Margin="40,0,0,0"
+                    FontWeight="Bold"
+                    Width="50"
+                    Height="4"/>
+                    </StackPanel>
 
-        </StackPanel>
 
-        <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1">
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,30,0,0"/>
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,20,0,0"/>
-            <Rectangle Width="200" Height="100" Fill="DarkCyan"  Margin="80,20,0,0"/>
+                </Grid>
+                <Grid HorizontalAlignment="Stretch" Background="#FF81CED6" Height="50" BorderBrush="#FF008E86" BorderThickness="1,0,1,1">
 
-        </StackPanel>
+                    <Grid 
+                          Background="#FF00717C"
+                          BorderBrush="#FF008E86" 
+                          Height="10"
+                          Width="70"
+                          Margin="-92,0,0,25"
+                          BorderThickness="1,1,1,1">
+                        <TextBlock
+                        Text=" Resolución "
+                        FontSize="3"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        FontFamily="Arial"
+                        Margin="2,2.5,0,0"/>
+                    </Grid>
 
-        <!--Los cuadrados y textos de abajo-->
-        <StackPanel Grid.Row="4" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-            <Rectangle Width="500" Height="100" Fill="DarkCyan"  Margin="0,50,0,0"/>
+                    <Grid Background="#FF00717C"
+                          BorderBrush="#FF008E86" 
+                          Height="20"
+                          Width="70"
+                          Margin="-92,0,0,-15"
+                          BorderThickness="1,1,1,1">
 
-        </StackPanel>
 
-        <Button Click="BackButton_OnClick" Margin="15,0,0,0" Height="61" Background="DarkCyan" BorderBrush="Aquamarine" Foreground="White">
-            <SymbolIcon Symbol="Back" VerticalAlignment="Center" Width="57" Height="42"/>
-        </Button>
+                    </Grid>
+
+                    <StackPanel>
+                        <Grid 
+                          Background="#FF00717C"
+                          BorderBrush="#FF008E86" 
+                          Height="10"
+                          Width="20"
+                          Margin="47,6,0,40"
+                          BorderThickness="1,1,1,1">
+                            <TextBlock
+                        FontSize="3"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        FontFamily="Arial"
+                        Margin="2,1,1,0"><Run Text=" Música "/><LineBreak/><Run Text="de fondo "/></TextBlock>
+                        </Grid>
+                        <Grid 
+                          Background="#FF00717C"
+                          BorderBrush="#FF008E86" 
+                          Height="10"
+                          Width="20"
+                          Margin="47,-63,0,0"
+                          BorderThickness="1,1,1,1">
+                            <TextBlock
+                        FontSize="3"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        FontFamily="Arial"
+                        Margin="2,1,1,0"><Run Text=" Efectos "/><LineBreak/><Run Text="de fondo "/></TextBlock>
+
+                        </Grid>
+                        <Grid 
+                          Background="#FF00717C"
+                          BorderBrush="#FF008E86" 
+                          Height="10"
+                          Width="20"
+                          Margin="47,-36,0,0"
+                          BorderThickness="1,1,1,1">
+                            <TextBlock
+                        FontSize="3"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        FontFamily="Arial"
+                        Margin="2,1,1,0"><Run Text="Sonido de la "/><LineBreak/><Run Text="interfaz"/></TextBlock>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+
+                <Grid HorizontalAlignment="Stretch" Background="#FF00717C" BorderBrush="#FF008E86" BorderThickness="1,0,1,1">
+
+                    <TextBlock
+                    Text=" CONTROLES Y OTROS "
+                    FontSize="3"
+                    Foreground="White"
+                    FontFamily="Arial"
+                    FontWeight="Bold"
+                    Margin="80,0,60,-1"
+                    Width="50"
+                    Height="5"/>
+
+
+                </Grid>
+                <Grid HorizontalAlignment="Stretch" Background="#FF81CED6" Height="30" BorderBrush="#FF008E86" BorderThickness="1,0,1,1">
+
+                    <Grid 
+                          Background="#FF00717C"
+                          BorderBrush="#FF008E86" 
+                          Height="10"
+                          Width="70"
+                          Margin="0,0,0,15"
+                          BorderThickness="1,1,1,1">
+                        <TextBlock
+                        Text=" Idioma "
+                        FontSize="3"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        FontFamily="Arial"
+                         Margin="10,2.5,0,0"/>
+
+
+                    </Grid>
+                    <Grid 
+                        
+                        Background="White"
+                        BorderBrush="#FF008E86" 
+                        Height="8"
+                        Width="28"
+                        Margin="-150,0,0,-15"   
+                        BorderThickness="1,1,1,1" FocusVisualPrimaryBrush="#33000000">
+
+                        <Button Click="Button_Click" 
+                                Content="RESTABLECER" 
+                                Height="39"
+                                Width="65" 
+                                FontSize="3.5"
+                                FontWeight="Bold"
+                                HorizontalAlignment="Center" 
+                                Background="White"
+                                Foreground="#FF00717C"/>
+
+
+                    </Grid>
+                    <Grid 
+                        
+                        Background="White"
+                        BorderBrush="#FF008E86" 
+                        Height="8"
+                        Width="28"
+                        Margin="150,0,0,-15"   
+                        BorderThickness="1,1,1,1">
+
+                        <Button Click="Button_Click" 
+                                Content="ACEPTAR" 
+                                Height="39"
+                                Width="65" 
+                                FontSize="3.5"
+                                FontWeight="Bold"
+                                HorizontalAlignment="Center" 
+                                Background="White"
+                                Foreground="#FF00717C" FocusVisualPrimaryBrush="#33000000"/>
+
+
+                    </Grid>
+
+
+
+
+
+                </Grid>
+
+            </StackPanel>
+
+        </Viewbox>
+
+        <Viewbox HorizontalAlignment="Stretch"
+                 VerticalAlignment="Stretch"
+                 Grid.ColumnSpan="2"
+                 Grid.RowSpan="10"
+                 Grid.Row="2"
+                 Grid.Column="1">
+            <Grid HorizontalAlignment="Left" >
+                <CheckBox Margin="65,-30,0,0" VerticalAlignment="Top" Height="100" Width="600">
+
+                    <TextBlock
+                            Text=" Pantalla completa "
+                            FontSize="10"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            Margin="0,6,0,0"
+                            FontFamily="Arial" Width="200"
+                />
+                </CheckBox>
+            </Grid>
+
+        </Viewbox>
+
+        <Viewbox HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 Grid.ColumnSpan="1"
+                 Grid.RowSpan="1"
+                 Grid.Row="3"
+                 Grid.Column="2" Height="300">
+            <Grid HorizontalAlignment="Center" Width="500" Height="60">
+
+                <Slider Margin="190,-37,57,60"/>
+            </Grid>
+
+        </Viewbox>
+
+
     </Grid>
 </Page>
