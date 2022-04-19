@@ -125,6 +125,7 @@
     <Compile Include="Campaign.xaml.cs">
       <DependentUpon>Campaign.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InputHandler.cs" />
     <Compile Include="Leaderboard.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Classification.xaml.cs">

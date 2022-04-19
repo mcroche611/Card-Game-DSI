@@ -6,47 +6,75 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#abd2ab">
 
     <Page.Resources>
         <DataTemplate x:Key="RankingUser"
                       x:DataType="local:User">
-            <Grid Height="40" Width="300" Margin="8">
+            <Grid Height="40"
+                  Width="500"
+                  Margin="8">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20"/>
                     <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="{x:Bind id}" VerticalAlignment="Center"/>
-                <Image Source="{x:Bind profilePicture}" Grid.Column="1" VerticalAlignment="Center"/>
-                <TextBlock Text="{x:Bind username}"  Grid.Column="2" VerticalAlignment="Center"/>
+                <TextBlock Text="{x:Bind id}" 
+                           VerticalAlignment="Center"/>
+                <Image Source="{x:Bind profilePicture}" 
+                       Grid.Column="1" 
+                       VerticalAlignment="Center"/>
+                <TextBlock Text="{x:Bind username}"  
+                           Grid.Column="2" 
+                           VerticalAlignment="Center"/>
+                <TextBlock Text="{x:Bind points}"  
+                           Grid.Column="3" 
+                           VerticalAlignment="Center"/>
             </Grid>
         </DataTemplate>
     </Page.Resources>
-    
+
     <Grid>
-      <!--Back button-->
-      <Grid.RowDefinitions>
-        <RowDefinition Height="Auto" />
-        <RowDefinition />
-      </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
 
-      <Grid Background="AntiqueWhite"
-            Padding="10">
-            <Button Click="BackButton_OnClick">
-          <SymbolIcon Symbol="Back" />
-        </Button>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top">
+            <Button Click="BackButton_OnClick" 
+                    Background="Transparent"
+                    Foreground="Black">
+                <SymbolIcon Symbol="Back"/>
+            </Button>
+            <TextBlock Text="ESC"
+                       VerticalAlignment="Center"
+                       Foreground="Black"/>
+        </StackPanel>
 
-        <TextBlock Text="Classification"
-                   Style="{ThemeResource TitleTextBlockStyle}"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center" />
-      </Grid>
-
-        <ListView x:Name="ImageGridView" 
-                  IsItemClickEnabled="True"
-                  Grid.Row="1" Grid.Column="1" 
-                  ItemsSource= "{x:Bind leaderboard}"
-                  ItemTemplate="{StaticResource RankingUser}"/>
+        <NavigationView x:Name="LeaderTabs" 
+                        PaneDisplayMode="Top"
+                        SelectionFollowsFocus="Enabled" 
+                        IsBackButtonVisible="Collapsed"
+                        Grid.Column="1" 
+                        Background="CadetBlue"
+                        IsSettingsVisible="False">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="World" Content="World" x:Name="World" />
+                <NavigationViewItem Icon="Flag" Content="Region" x:Name="Region" />
+                <NavigationViewItem Icon="People" Content="Friends" x:Name="Friends" />
+            </NavigationView.MenuItems>
+            <Frame x:Name="contentFrame">
+                <ListView x:Name="ImageGridView" 
+                          IsItemClickEnabled="True"
+                          Grid.Row="1" 
+                          Grid.Column="1" 
+                          ItemsSource= "{x:Bind leaderboard}"
+                          ItemTemplate="{StaticResource RankingUser}"
+                          HorizontalAlignment="Center"/>
+            </Frame>
+        </NavigationView>
     </Grid>
 </Page>

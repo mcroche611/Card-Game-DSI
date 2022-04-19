@@ -10,11 +10,11 @@ namespace card_game_DSI
     {
         public static List<User> leaderboard = new List<User>()
         {
-            new User(1, "Kaycee21"), 
-            new User(2, "TheExplorer"), 
-            new User(3, "BubbleYuno"), 
-            new User(4, "JudyVertigo"), 
-            new User(5, "RodriguezPaellas") 
+            new User(1, "Kaycee21", 6123), 
+            new User(2, "TheExplorer", 6120), 
+            new User(3, "BubbleYuno", 6114), 
+            new User(4, "JudyVertigo", 6111), 
+            new User(5, "RodriguezPaellas", 6098) 
         };
 
         public static IList<User> GetLeaderboard()

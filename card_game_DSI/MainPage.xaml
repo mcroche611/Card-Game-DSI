@@ -63,7 +63,8 @@
                         FontSize="96" Padding="0,0,0,0"
                         Click="OnlineMatch_Click">
                     <Grid>
-                        <Image Source="/Assets/Online Match.png" Margin="-10,-17,10,17"/>
+                        <Image Source="/Assets/Online Match.png" 
+                               Margin="-10,-17,10,17"/>
                         <TextBlock Text="ONLINE MATCH" 
                                    HorizontalAlignment="Left" 
                                    VerticalAlignment="Bottom" 
