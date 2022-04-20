@@ -54,7 +54,7 @@ namespace card_game_DSI
 
         private void ImageGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //(sender as Email).Open();
+            //((sender as ListView).SelectedItem as Inbox).maiL
         }
     }
 }

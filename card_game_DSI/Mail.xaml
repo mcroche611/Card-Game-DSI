@@ -14,9 +14,14 @@
             <Grid Height="40"
                   Margin="8"
                   MinWidth="500">
-                <TextBlock Text="{x:Bind subject}"
-                           VerticalAlignment="Center"
-                           Foreground="Black"/>
+                <StackPanel VerticalAlignment="Center"
+                            Orientation="Horizontal">
+                    <SymbolIcon x:Name="mailIcon"
+                                Symbol="Mail"
+                                Margin="0,0,20,0"/>
+                    <TextBlock Text="{x:Bind subject}"
+                               Foreground="Black"/>
+                </StackPanel>
                 <TextBlock Text="{x:Bind sender}"  
                            TextAlignment="Right"
                            HorizontalAlignment="Right"
