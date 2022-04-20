@@ -14,11 +14,12 @@ namespace card_game_DSI
         public string status { get; set; }
         public int points { get; set; }
 
-        public User(int identificator, string name, int punctuation) { 
+        public User(int identificator, string name, int punctuation, 
+            string statusMessage = "Hey there! Wanna battle me?") { 
             id = identificator;
             username = name;
             profilePicture = $"Assets\\Profile Pictures\\{id}.png";
-            status = "Hey there! Wanna battle me?";
+            status = statusMessage;
             points = punctuation;
         }
     }

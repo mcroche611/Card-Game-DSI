@@ -6,9 +6,60 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#abd2ab">
 
-    <Grid>
+    <Page.Resources>
+        <DataTemplate x:Key="Inbox"
+                      x:DataType="local:Email">
+            <Grid Height="40"
+                  Margin="8"
+                  MinWidth="500">
+                <TextBlock Text="{x:Bind subject}"
+                           VerticalAlignment="Center"
+                           Foreground="Black"/>
+                <TextBlock Text="{x:Bind sender}"  
+                           TextAlignment="Right"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Center"
+                           Foreground="#20506a"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
 
+    <Grid Margin="100,50"
+          Background="CadetBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center">
+            <Button Click="BackButton_OnClick" 
+                    Background="Transparent"
+                    Foreground="Black">
+                <SymbolIcon Symbol="Back"/>
+            </Button>
+            <TextBlock Text="ESC"
+                       VerticalAlignment="Center"
+                       Foreground="Black"/>
+        </StackPanel>
+
+        <TextBlock Text="INBOX"
+                   Foreground="Black"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="36"/>
+
+        <ListView x:Name="ImageGridView" 
+                  IsItemClickEnabled="True"
+                  Grid.Row="1"
+                  ItemsSource="{x:Bind inbox}"
+                  ItemTemplate="{StaticResource Inbox}"
+                  ItemClick="ImageGridView_ItemClick"
+                  HorizontalAlignment="Stretch"
+                  Background="LightBlue"
+                  MinWidth="500"
+                  HorizontalContentAlignment="Stretch"/>
     </Grid>
 </Page>

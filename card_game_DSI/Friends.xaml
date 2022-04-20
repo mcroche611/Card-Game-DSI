@@ -29,7 +29,7 @@
                 <TextBlock Text="{x:Bind status}"  
                            Grid.Column="3" 
                            VerticalAlignment="Center"
-                           Foreground="#222222"/>
+                           Foreground="#20506a"/>
             </Grid>
         </DataTemplate>
     </Page.Resources>

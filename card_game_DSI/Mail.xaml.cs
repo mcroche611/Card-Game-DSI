@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +23,38 @@ namespace card_game_DSI
     /// </summary>
     public sealed partial class Mail : Page
     {
+        public ObservableCollection<Email> inbox { get; } = new ObservableCollection<Email>();
+
         public Mail()
         {
             this.InitializeComponent();
+        }
+
+        private void BackButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            // First, check that it's safe to ask the Frame to go backward.
+            if (Frame.CanGoBack)
+            {
+                // If there's a page in the "backstack," we can call GoBack().
+                Frame.GoBack();
+            }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (inbox != null)
+                foreach (Email email in Inbox.GetInbox())
+                {
+                    inbox.Add(email);
+                }
+            base.OnNavigatedTo(e);
+
+            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
+        }
+
+        private void ImageGridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //(sender as Email).Open();
         }
     }
 }
