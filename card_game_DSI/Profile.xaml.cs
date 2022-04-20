@@ -22,18 +22,27 @@ namespace card_game_DSI
     /// </summary>
     public sealed partial class Profile : Page
     {
+        public string username { get; set; }
+        public string status { get; set; }
+        public string coleccion { get; set; }
+        public string partidas { get; set; }
+        public string clasificacion { get; set; }
+        public string victorias { get; set; }
+
         public Profile()
         {
             this.InitializeComponent();
+            username = "Kaycee21";
+            status = "Hello card gamers!";
+            coleccion = "27";
+            partidas = "16";
+            clasificacion = "69420";
+            victorias = "1";
         }
-        private void BackButton_OnClick(object sender, RoutedEventArgs e)
+
+
+        private void Profile_Click(object sender, RoutedEventArgs e)
         {
-            // First, check that it's safe to ask the Frame to go backward.
-            if (Frame.CanGoBack)
-            {
-                // If there's a page in the "backstack," we can call GoBack().
-                Frame.GoBack();
-            }
         }
     }
 }

@@ -6,25 +6,163 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#abd2ab">
 
     <Grid>
-      <!--Back button-->
-      <Grid.RowDefinitions>
-        <RowDefinition Height="Auto" />
-        <RowDefinition />
-      </Grid.RowDefinitions>
 
-      <Grid Background="AntiqueWhite"
-            Padding="10">
-        <Button Click="BackButton_OnClick">
-          <SymbolIcon Symbol="Back" />
-        </Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
 
-        <TextBlock Text="Profile"
-                   Style="{ThemeResource TitleTextBlockStyle}"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center" />
-      </Grid>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="20*"/>
+
+
+        </Grid.ColumnDefinitions>
+
+        <Viewbox HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Grid.Row="1">
+            <Button x:Name="Perfil"
+                        Background="Transparent"
+                        Width="431"
+                        Height="188" 
+                        FontFamily="Bookman Old Style" 
+                        FontSize="24" 
+                        Margin="0,50,0,0"
+                        HorizontalAlignment="Right"
+                        Click="Profile_Click">
+                <Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Name="Username" 
+                                           Text="{x:Bind username, Mode=OneWay}" 
+                                           HorizontalAlignment="Right" 
+                                           VerticalAlignment="Top" 
+                                           TextAlignment="Center" 
+                                           IsDoubleTapEnabled="False" 
+                                           IsHoldingEnabled="False" 
+                                           IsRightTapEnabled="False" 
+                                           IsTapEnabled="False" 
+                                           FontSize="36" 
+                                           Foreground="Black"/>
+                            <TextBlock x:Name="Status" 
+                                           Text="Online" 
+                                           HorizontalAlignment="Right" 
+                                           VerticalAlignment="Top" 
+                                           TextAlignment="Center"
+                                           IsDoubleTapEnabled="False" 
+                                           IsHoldingEnabled="False" 
+                                           IsRightTapEnabled="False" 
+                                           IsTapEnabled="False" 
+                                           Foreground="#FF109A0E" 
+                                           Margin="0,10,0,0"/>
+                        </StackPanel>
+                        <Image x:Name="ProfilePicture" 
+                                   Source="/Assets/Profile Pictures/1.png" 
+                                   Height="110" 
+                                   Width="110" 
+                                   HorizontalAlignment="Left" 
+                                   VerticalAlignment="Top" 
+                                   Margin="40,0,0,0"/>
+
+
+                    </StackPanel>
+                </Grid>
+            </Button>
+        </Viewbox>
+        
+        <Viewbox HorizontalAlignment="Right"
+                 VerticalAlignment="Center"
+                 Grid.Row="1"
+                 Grid.Column="2">
+            <Button x:Name="LogOut"
+                        Background="Transparent"
+                        FontSize="5"
+                        FontWeight="SemiBold"
+                        HorizontalAlignment="Right" 
+                        Margin="10,0,10,0" VerticalAlignment="Top" HorizontalContentAlignment="Right">
+                <TextBlock>
+                    <Run FontFamily="Bookman Old Style" Foreground="DarkGray"></Run>
+                    <Span><Underline>Cerrar sesión</Underline> </Span>
+
+                </TextBlock>
+            </Button>
+        </Viewbox>
+
+        <Viewbox HorizontalAlignment= "Center"
+                 VerticalAlignment="Center"
+                 Grid.Row="2"
+                 Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <Grid Margin="0,0,100,0">
+                    <TextBlock>
+                    <Run FontFamily="Bookman Old Style" Foreground="Black">
+                    </Run>Colección de cartas <LineBreak></LineBreak>
+                    <Span>Partidas jugadas  </Span> <LineBreak></LineBreak>
+                    <Span>Puntos en la clasificación</Span><LineBreak></LineBreak>
+                    <Span>Victorias en torneos</Span>
+
+
+                    </TextBlock>
+                </Grid>
+                <Grid Margin="0,0,0,0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock x:Name="Coleccion" 
+                     Text="{x:Bind coleccion, Mode=OneWay}" >
+                        </TextBlock>
+                        <TextBlock x:Name="Partidas" 
+                     Text="{x:Bind partidas, Mode=OneWay}" >
+                        </TextBlock>
+                        <TextBlock x:Name="Clasificacion" 
+                     Text="{x:Bind clasificacion, Mode=OneWay}" >
+                        </TextBlock>
+                        <TextBlock x:Name="Victorias" 
+                     Text="{x:Bind victorias, Mode=OneWay}" >
+                        </TextBlock>
+
+                    </StackPanel>
+                    
+                </Grid>
+            </StackPanel>
+
+
+            
+        </Viewbox>
+        <Viewbox HorizontalAlignment= "Center"
+                 VerticalAlignment="Center"
+                 Grid.Row="3"
+                 Grid.Column="1">
+            <Grid>
+                
+            </Grid>
+            
+        </Viewbox>
+        <Viewbox Grid.Row="4"
+                 Grid.Column="1" HorizontalAlignment="Center"
+                 VerticalAlignment="Top">
+            <Grid 
+                 Margin="0,20,0,0">
+                <Button x:Name="Aceptar"
+                        Background="White"
+                        BorderBrush="DarkTurquoise"
+                        BorderThickness="1"
+                        FontSize="5"
+                        FontWeight="SemiBold"
+                        Content="ACEPTAR"
+                        HorizontalAlignment="Right" 
+                        Margin="0,0,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right">
+
+                </Button>
+            </Grid>
+        </Viewbox>
+        
     </Grid>
 </Page>
