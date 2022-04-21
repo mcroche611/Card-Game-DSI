@@ -122,6 +122,7 @@
     <Compile Include="Board.xaml.cs">
       <DependentUpon>Board.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BoardCards.cs" />
     <Compile Include="Campaign.xaml.cs">
       <DependentUpon>Campaign.xaml</DependentUpon>
     </Compile>
