@@ -43,7 +43,7 @@ namespace card_game_DSI
 
         private void Campaign_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Map));
+            Frame.Navigate(typeof(Campaign));
         }
 
         private void OnlineMatch_Click(object sender, RoutedEventArgs e)

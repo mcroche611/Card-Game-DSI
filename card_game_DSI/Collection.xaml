@@ -6,25 +6,121 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#abd2ab">
+
+    <Page.Resources>
+        <!--<DataTemplate x:Key="myCard"
+                      x:DataType="local:Card">
+            <Grid Height="80"
+                  Width="80"
+                  Margin="8">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <Image Source="{x:Bind cardPicture}" 
+                       Grid.Column="1" 
+                       VerticalAlignment="Center"/>
+                
+            </Grid>
+        </DataTemplate>-->
+
+        <!--<DataTemplate x:Name="myCard" x:DataType="local:Card">
+        <Grid Width="100">
+                <Image Source="{x:Bind cardPicture}"/>
+                <StackPanel Orientation="Vertical" Height="40" VerticalAlignment="Bottom" Padding="5,1,5,1"
+                    Background="LightGray" Opacity=".75">
+                </StackPanel>
+        </Grid>
+        </DataTemplate>-->
+
+        <DataTemplate x:Key="myCard" x:DataType="local:Card">
+            <Grid Height="300"
+                  Width="200"
+                  Margin="8">
+
+            <Image Stretch="UniformToFill" Source="{x:Bind cardPicture}"
+                       VerticalAlignment="Center"/>
+            </Grid>
+
+        </DataTemplate>
+
+    </Page.Resources>
 
     <Grid>
-        <!--Back button-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="30*"/>
+
         </Grid.RowDefinitions>
-
-        <Grid Background="AntiqueWhite"
-              Padding="10">
-            <Button Click="BackButton_OnClick">
-                <SymbolIcon Symbol="Back" />
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top">
+            <Button Click="BackButton_OnClick" 
+                    Background="Transparent"
+                    Foreground="Black">
+                <SymbolIcon Symbol="Back"/>
             </Button>
-
-            <TextBlock Text="Collection"
-                       Style="{ThemeResource TitleTextBlockStyle}"
+            <TextBlock Text="ESC"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center" />
-        </Grid>
+                       Foreground="Black"/>
+        </StackPanel>
+
+        <!--<ListView x:Name="ImageGridView" 
+                          IsItemClickEnabled="True"
+                          Grid.Row="1" 
+                          Grid.Column="1" 
+                          ItemsSource= "{x:Bind cards}"
+                          ItemTemplate="{StaticResource myCard}"
+                          HorizontalAlignment="Center"/>-->
+
+        <!--<GridView
+        x:Name="ImageGridView"
+            Grid.Row="1" 
+            Grid.Column="1" 
+        ItemTemplate="{StaticResource myCard}">
+
+        <GridView.ItemContainerStyle>
+            <Style TargetType="GridViewItem">
+                <Setter Property="Margin" Value="10, 5, 10, 5"/>
+            </Style>
+        </GridView.ItemContainerStyle>
+
+        --><!-- An extra property also needs to be added to the GridView's ItemsWrapGrid.
+    The following sets the maximum # of items to show before wrapping.--><!--
+        <GridView.ItemsPanel>
+            <ItemsPanelTemplate>
+                <ItemsWrapGrid x:Name="MaxItemsWrapGrid"
+                           MaximumRowsOrColumns="5"
+                           Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+        </GridView.ItemsPanel>
+        </GridView>-->
+
+        <GridView
+        x:Name="BasicGridView"
+        Grid.Row="0" 
+        Grid.Column="1" 
+        ItemsSource= "{x:Bind cards}"
+        ItemTemplate="{StaticResource myCard}"
+        IsItemClickEnabled="True"
+        ItemClick="BasicGridView_ItemClick"
+        SelectionMode="Single"/>
+
+        <TextBlock x:Name="CardDescription"
+        Grid.Row="1" 
+        Grid.Column="1" TextWrapping="Wrap"
+        FontSize="90" HorizontalAlignment="Center"
+        Text="{x:Bind cardDescription}">
+        </TextBlock>
+
     </Grid>
 </Page>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+﻿using System.Collections.ObjectModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,9 +18,14 @@ namespace card_game_DSI
     /// </summary>
     public sealed partial class Collection : Page
     {
+
+        public string cardDescription { get; set; }
+
+        public ObservableCollection<Card> cards { get; } = new ObservableCollection<Card>();
         public Collection()
         {
             this.InitializeComponent();
+            cardDescription = "Aquí estaria la descripcion de la carta";
         }
 
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
@@ -35,6 +36,23 @@ namespace card_game_DSI
                 // If there's a page in the "backstack," we can call GoBack().
                 Frame.GoBack();
             }
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // Cosntruye las listas de ModelView a partir de la lista Modelo 
+            if (cards != null)
+                foreach (Card card in CardCollection.GetCards())
+                {
+                    cards.Add(card);
+                }
+            base.OnNavigatedTo(e);
+
+            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
+        }
+
+        private void BasicGridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            CardDescription.Text = (e.ClickedItem as Card).description;
         }
     }
 }
