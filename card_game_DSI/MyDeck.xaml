@@ -6,91 +6,62 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="#abd2ab">
-
-    <Page.Resources>
-
-        <DataTemplate x:Key="myCard" x:DataType="local:Card">
-            <Grid Height="150"
-                  Width="100"
-                  Margin="8">
-
-                <Image Stretch="UniformToFill" Source="{x:Bind cardPicture}"
-                       VerticalAlignment="Center"/>
-            </Grid>
-
-        </DataTemplate>
-
-    </Page.Resources>
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="5*"/>
-        </Grid.ColumnDefinitions>
+        <!--Back button-->
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="5*"/>
-
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
 
-        <StackPanel Orientation="Horizontal"
-                    VerticalAlignment="Center">
-            <Button Click="BackButton_OnClick" 
-                    Background="Transparent"
-                    Foreground="Black">
-                <SymbolIcon Symbol="Back"/>
+        <Grid Background="AntiqueWhite"
+            Padding="10" Grid.Column="1">
+            <Button Click="BackButton_OnClick">
+                <SymbolIcon Symbol="Back" />
             </Button>
-            <TextBlock Text="ESC"
-                       VerticalAlignment="Center"
-                       Foreground="Black"/>
-        </StackPanel>
 
-        <Grid Grid.Row="1" 
-        Grid.Column="1" Background="#FF538272" BorderThickness="10" Margin="0,0,40,0" CornerRadius="40">
-            <Grid.BorderBrush>
-                <AcrylicBrush TintColor="#CC195676"/>
-            </Grid.BorderBrush>
+            <TextBlock Text="My Deck"
+                   Style="{ThemeResource TitleTextBlockStyle}"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
 
         </Grid>
-        <Grid Grid.Row="1" 
-        Grid.Column="2" Background="#FF538272" BorderThickness="10" Margin="40,0,0,0" CornerRadius="40">
-            <Grid.BorderBrush>
-                <AcrylicBrush TintColor="#CC195676"/>
-            </Grid.BorderBrush>
-            <Grid Background="#CC195676" BorderThickness="10" Margin="45,45,45,350" CornerRadius="10">
-                <Grid.BorderBrush>
-                    <AcrylicBrush TintColor="#CC195676"/>
-                </Grid.BorderBrush>
-                <GridView
-        x:Name="BasicGridView2"
-        Grid.Row="1" 
-        Grid.Column="2" 
-        Margin="0,0,0,0"
-        ItemsSource= "{x:Bind myDeck}"
-        ItemTemplate="{StaticResource myCard}"
-        IsItemClickEnabled="True"
-        ItemClick="BasicGridView2_ItemClick"
-        SelectionMode="Single"/>
 
+        <Button x:Name="Ardilla3"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="136,240,-327,-334" />
+        </Button>
 
-            </Grid>
+        <Button x:Name="Ardilla4"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="133,268,-324,-362" />
+        </Button>
 
-        </Grid>
-        <GridView
-        x:Name="BasicGridView"
-        Grid.Row="1" 
-        Grid.Column="1" 
-        Margin="70"
-        ItemsSource= "{x:Bind allCards}"
-        ItemTemplate="{StaticResource myCard}"
-        IsItemClickEnabled="True"
-        ItemClick="BasicGridView_ItemClick"
-        SelectionMode="Multiple"/>
-
-        
+        <Button x:Name="Ardilla5"
+                    Background="Transparent"
+                    Width="103"
+                    Height="92" 
+                    FontFamily="Bookman Old Style" 
+                    FontSize="48" 
+                    VerticalAlignment="Bottom">
+            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="134,303,-325,-397" />
+        </Button>
     </Grid>
 </Page>
