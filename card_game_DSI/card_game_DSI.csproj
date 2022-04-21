@@ -126,6 +126,7 @@
       <DependentUpon>Campaign.xaml</DependentUpon>
     </Compile>
     <Compile Include="Card.cs" />
+    <Compile Include="BoardCards.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="Inbox.cs" />
     <Compile Include="InputHandler.cs" />

@@ -13,9 +13,10 @@ namespace card_game_DSI
         public string cardPicture { get; set; }
         public string status { get; set; }
         public int points { get; set; }
+        public int num { get; set; }
 
         public Card(string identificator, string name, int punctuation,
-            string statusMessage = "Descripción")
+            string statusMessage = "Descripción", int num = 0)
         {
             id = identificator;
             description = identificator;

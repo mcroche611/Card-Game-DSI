@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,6 +23,10 @@ namespace card_game_DSI
     /// </summary>
     public sealed partial class MyDeck : Page
     {
+
+        public ObservableCollection<Card> allCards { get; } = new ObservableCollection<Card>();
+        public ObservableCollection<Card> myDeck { get; } = new ObservableCollection<Card>();
+
         public MyDeck()
         {
             this.InitializeComponent();
@@ -35,5 +40,30 @@ namespace card_game_DSI
                 Frame.GoBack();
             }
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // Cosntruye las listas de ModelView a partir de la lista Modelo 
+            if (allCards != null)
+                foreach (Card card in CardCollection.GetCards())
+                {
+                    allCards.Add(card);
+                }
+            base.OnNavigatedTo(e);
+
+            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
+        }
+
+        private void BasicGridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            myDeck.Add(e.ClickedItem as Card);
+
+        }
+
+        private void BasicGridView2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            myDeck.Remove(e.ClickedItem as Card);
+
+        }
+
     }
 }

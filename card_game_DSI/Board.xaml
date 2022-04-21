@@ -6,128 +6,186 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#abd2ab">
 
+    <Page.Resources>
+
+        <DataTemplate x:Key="myCard" x:DataType="local:Card">
+            <Grid Height="175"
+                  Width="125"
+                  Margin="10">
+
+                <Image Stretch="UniformToFill" Source="{x:Bind cardPicture}"
+                       VerticalAlignment="Center"/>
+            </Grid>
+
+        </DataTemplate>
+
+    </Page.Resources>
+    
     <Grid>
-      <!--Back button-->
-      <Grid.RowDefinitions>
-        <RowDefinition Height="Auto" />
-        <RowDefinition />
-      </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
 
-      <Grid Background="AntiqueWhite"
-            Padding="10">
-        <Button Click="BackButton_OnClick">
-          <SymbolIcon Symbol="Back" />
-        </Button>
+        <!--Back button-->
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top">
+            <Button Click="BackButton_OnClick" Foreground="Black">
+                <SymbolIcon Symbol="Back"/>
+            </Button>
+            <TextBlock Text="ESC"
+                       VerticalAlignment="Center"
+                       Foreground="Black"/>
+        </StackPanel>
 
-        <TextBlock Text="Board"
-                   Style="{ThemeResource TitleTextBlockStyle}"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center" />
-          
+        <!--Balanza-->
+        <Image Grid.Row="0"
+               Grid.Column="0"
+               Source="/Assets/scale.png" 
+               Height="250" 
+               Width="250" 
+               HorizontalAlignment="Center" />
 
-      </Grid>
-        <!--Cartas-->
-        <Button x:Name="Ardilla"
-                    Background="Transparent"
-                    Width="103"
-                    Height="92" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom">
-            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="349,441,-540,-535" />
-        </Button>
+        <Image Grid.Row="1"
+               Grid.Column="0"
+               Source="/Assets/bell.png" 
+               Height="150" 
+               Width="150" 
+               HorizontalAlignment="Center" />
 
-        <Button x:Name="Alce"
-                    Background="Transparent"
-                    Width="103"
-                    Height="92" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom">
-            <Image Source="/Assets/Cards/Alce.jpg" Margin="509,441,-700,-535" />
-        </Button>
+        <!--Cartas adversario-->
+        <GridView
+        x:Name="BoardGridView"
+        Grid.Row="0" 
+        Grid.Column="1" 
+        ItemsSource= "{x:Bind boardCards}"
+        ItemTemplate="{StaticResource myCard}"
+        IsItemClickEnabled="True"
+        ItemClick="BasicGridView_ItemClick"
+        SelectionMode="Single"/>
 
-        <Button x:Name="Ardilla2"
-                    Background="Transparent"
-                    Width="103"
-                    Height="92" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom">
-            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="509,237,-700,-331" />
-        </Button>
+        <!--Cartas jugador-->
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+            </Grid.ColumnDefinitions>
 
-        <Button x:Name="Conejo"
-                    Background="Transparent"
-                    Width="103"
-                    Height="92" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom">
-            <Image Source="/Assets/Cards/Conejo.jpg" Margin="829,238,-1020,-332" />
-        </Button>
+            <ScrollViewer   x:Name="Card1"
+                            Grid.Column="0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            AllowDrop="True"
+                            DragOver="Card_DragOver"
+                            Drop="Card1_Drop">
+                <Grid>
+                    <Canvas AllowDrop="True"
+                            DragOver="Card_DragOver"
+                            Drop="Card1_Drop">
 
-        <Button x:Name="Armiño"
-                    Background="Transparent"
-                    Width="103"
-                    Height="92" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom">
-            <Image Source="/Assets/Cards/Armiño.jpg" Margin="677,441,-868,-535" />
-        </Button>
+                        <GridView x:Name="MiCarta1"
+                                    ItemsSource= "{x:Bind card1}"
+                                    ItemTemplate="{StaticResource myCard}"
+                                    IsItemClickEnabled="True"
+                                    ItemClick="BasicGridView_ItemClick"
+                                    SelectionMode="Single"/>
+                    </Canvas>
+                </Grid>
+            </ScrollViewer>
 
-        <Button x:Name="Scale"
-                    Background="Transparent"
-                    Width="103"
-                    Height="92" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom">
-            <Image Source="/Assets/scale.png" Margin="13,206,-292,-419" />
-        </Button>
+            <ScrollViewer   x:Name="Card2"
+                            Grid.Column="1"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            AllowDrop="True"
+                            DragOver="Card_DragOver"
+                            Drop="Card2_Drop">
+                <Grid>
+                    <Canvas AllowDrop="True"
+                            DragOver="Card_DragOver"
+                            Drop="Card2_Drop">
 
-        <Button x:Name="Bells"
-                    Background="Transparent"
-                    Width="103"
-                    Height="92" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom">
-            <Image Source="/Assets/bell.png" Margin="46,682,-229,-760" />
-        </Button>
+                        <GridView x:Name="MiCarta2"
+                                    ItemsSource= "{x:Bind card2}"
+                                    ItemTemplate="{StaticResource myCard}"
+                                    IsItemClickEnabled="True"
+                                    ItemClick="BasicGridView_ItemClick"
+                                    SelectionMode="Single"/>
+                    </Canvas>
+                </Grid>
+            </ScrollViewer>
 
-        <Button x:Name="Ardilla3"
-                    Background="Transparent"
-                    Width="103"
-                    Height="92" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom">
-            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="1216,667,-1407,-761" />
-        </Button>
+            <ScrollViewer   x:Name="Card3"
+                            Grid.Column="2"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            AllowDrop="True"
+                            DragOver="Card_DragOver"
+                            Drop="Card3_Drop">
+                <Grid>
+                    <Canvas AllowDrop="True"
+                            DragOver="Card_DragOver"
+                            Drop="Card3_Drop">
 
-        <Button x:Name="Ardilla4"
-                    Background="Transparent"
-                    Width="103"
-                    Height="92" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom">
-            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="1216,703,-1407,-797" />
-        </Button>
+                        <GridView x:Name="MiCarta3"
+                                    ItemsSource= "{x:Bind card3}"
+                                    ItemTemplate="{StaticResource myCard}"
+                                    IsItemClickEnabled="True"
+                                    ItemClick="BasicGridView_ItemClick"
+                                    SelectionMode="Single"/>
+                    </Canvas>
+                </Grid>
+            </ScrollViewer>
 
-        <Button x:Name="Ardilla5"
-                    Background="Transparent"
-                    Width="103"
-                    Height="92" 
-                    FontFamily="Bookman Old Style" 
-                    FontSize="48" 
-                    VerticalAlignment="Bottom">
-            <Image Source="/Assets/Cards/Ardilla.jpg" Margin="1219,744,-1410,-838" />
-        </Button>
+            <ScrollViewer   x:Name="Card4"
+                            Grid.Column="3"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            AllowDrop="True"
+                            DragOver="Card_DragOver"
+                            Drop="Card4_Drop">
+                <Grid>
+                    <Canvas Grid.Row="0"                 
+                            AllowDrop="True"
+                            DragOver="Card_DragOver"
+                            Drop="Card4_Drop">
+
+                        <GridView x:Name="MiCarta4"
+                                    Grid.Row="0" 
+                                    ItemsSource= "{x:Bind card4}"
+                                    ItemTemplate="{StaticResource myCard}"
+                                    IsItemClickEnabled="True"
+                                    ItemClick="BasicGridView_ItemClick"
+                                    SelectionMode="Single"/>
+                    </Canvas>
+                </Grid>
+            </ScrollViewer>
+
+        </Grid>
+
+        <!--Cartas mano del jugador-->
+        <GridView
+        x:Name="HandGridView"
+        Grid.Row="2" 
+        Grid.Column="1" 
+        VerticalAlignment="Bottom"
+        ItemsSource= "{x:Bind handCards}"
+        ItemTemplate="{StaticResource myCard}"
+        IsItemClickEnabled="True"
+        ItemClick="BasicGridView_ItemClick"
+        SelectionMode="Single"
+        CanDragItems="True"
+        DragItemsStarting="HandGridView_DragItemsStarting"/>
 
     </Grid>
 </Page>
