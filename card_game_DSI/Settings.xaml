@@ -214,7 +214,8 @@
                         Margin="150,0,0,-15"   
                         BorderThickness="1,1,1,1">
 
-                        <Button Click="Button_Click" 
+                        <Button x:Name="Aceptar" 
+                                Click="Aceptar_Click" 
                                 Content="ACEPTAR" 
                                 Height="39"
                                 Width="65" 

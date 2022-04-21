@@ -97,13 +97,17 @@
             </Button>
         </Viewbox>
 
+
         <Viewbox HorizontalAlignment= "Center"
                  VerticalAlignment="Center"
                  Grid.Row="2"
                  Grid.Column="1">
-            <StackPanel Orientation="Horizontal">
-                <Grid Margin="0,0,100,0">
-                    <TextBlock>
+            <Grid>
+                <Grid Background="#FF5EC0A9" BorderThickness="2" Width="400" BorderBrush="#FF00717C">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Margin="0,0,100,0">
+                            <TextBlock>
                     <Run FontFamily="Bookman Old Style" Foreground="Black">
                     </Run>Colección de cartas <LineBreak></LineBreak>
                     <Span>Partidas jugadas  </Span> <LineBreak></LineBreak>
@@ -111,27 +115,32 @@
                     <Span>Victorias en torneos</Span>
 
 
-                    </TextBlock>
-                </Grid>
-                <Grid Margin="0,0,0,0">
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock x:Name="Coleccion" 
+                            </TextBlock>
+                        </Grid>
+                        <Grid Margin="0,0,0,0">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock x:Name="Coleccion" 
                      Text="{x:Bind coleccion, Mode=OneWay}" >
-                        </TextBlock>
-                        <TextBlock x:Name="Partidas" 
+                                </TextBlock>
+                                <TextBlock x:Name="Partidas" 
                      Text="{x:Bind partidas, Mode=OneWay}" >
-                        </TextBlock>
-                        <TextBlock x:Name="Clasificacion" 
+                                </TextBlock>
+                                <TextBlock x:Name="Clasificacion" 
                      Text="{x:Bind clasificacion, Mode=OneWay}" >
-                        </TextBlock>
-                        <TextBlock x:Name="Victorias" 
+                                </TextBlock>
+                                <TextBlock x:Name="Victorias" 
                      Text="{x:Bind victorias, Mode=OneWay}" >
-                        </TextBlock>
+                                </TextBlock>
 
+                            </StackPanel>
+
+                        </Grid>
                     </StackPanel>
-                    
                 </Grid>
-            </StackPanel>
+
+                
+            </Grid>
+            
 
 
             
@@ -140,26 +149,40 @@
                  VerticalAlignment="Center"
                  Grid.Row="3"
                  Grid.Column="1">
-            <Grid>
+            <Grid >
+                <Grid Background="#FF5EC0A9" BorderThickness="2" Width="400" BorderBrush="#FF00717C">
+                    <Grid Margin="0,10,250,15">
+                        <TextBlock>
+                    <Run FontFamily="Bookman Old Style" Foreground="Black">
+                    </Run>Presentación
+                        </TextBlock>
+                    </Grid>
+                    <Grid Margin="80,0,0,0" Width="300" HorizontalAlignment="Right">
+                        <TextBox></TextBox>
+
+                    </Grid>
+                </Grid>
+
                 
+
             </Grid>
-            
+
         </Viewbox>
         <Viewbox Grid.Row="4"
                  Grid.Column="1" HorizontalAlignment="Center"
                  VerticalAlignment="Top">
             <Grid 
-                 Margin="0,20,0,0">
+                 Margin="0,10,0,0">
                 <Button x:Name="Aceptar"
                         Background="White"
-                        BorderBrush="DarkTurquoise"
+                        BorderBrush="#FF00717C"
                         BorderThickness="1"
                         FontSize="5"
                         FontWeight="SemiBold"
                         Content="ACEPTAR"
+                        Foreground="#FF00717C"
                         HorizontalAlignment="Right" 
-                        Margin="0,0,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right">
-
+                        Click="Aceptar_Click">
                 </Button>
             </Grid>
         </Viewbox>

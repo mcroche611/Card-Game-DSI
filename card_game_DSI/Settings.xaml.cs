@@ -40,5 +40,15 @@ namespace card_game_DSI
         {
 
         }
+
+        private void Aceptar_Click(object sender, RoutedEventArgs e)
+        {
+            // First, check that it's safe to ask the Frame to go backward.
+            if (Frame.CanGoBack)
+            {
+                // If there's a page in the "backstack," we can call GoBack().
+                Frame.GoBack();
+            }
+        }
     }
 }
