@@ -13,7 +13,7 @@
         <DataTemplate x:Key="myCard" x:DataType="local:Card">
             <Grid Height="175"
                   Width="125"
-                  Margin="10">
+                  Margin="5">
 
                 <Image Stretch="UniformToFill" Source="{x:Bind cardPicture}"
                        VerticalAlignment="Center"/>
@@ -22,7 +22,7 @@
         </DataTemplate>
 
     </Page.Resources>
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
@@ -64,6 +64,7 @@
         <!--Cartas adversario-->
         <GridView
         x:Name="BoardGridView"
+        MinWidth="600"
         Grid.Row="0" 
         Grid.Column="1" 
         ItemsSource= "{x:Bind boardCards}"
@@ -73,7 +74,7 @@
         SelectionMode="Single"/>
 
         <!--Cartas jugador-->
-        <Grid Grid.Row="1" Grid.Column="1">
+        <Grid Grid.Row="1" Grid.Column="1" MinWidth="550" MaxWidth="550" HorizontalAlignment="Left">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="25*"/>
                 <ColumnDefinition Width="25*"/>
@@ -176,6 +177,7 @@
         <!--Cartas mano del jugador-->
         <GridView
         x:Name="HandGridView"
+        MinWidth="600"
         Grid.Row="2" 
         Grid.Column="1" 
         VerticalAlignment="Bottom"
@@ -186,6 +188,23 @@
         SelectionMode="Single"
         CanDragItems="True"
         DragItemsStarting="HandGridView_DragItemsStarting"/>
+
+
+        <Button Content="Rendirse"
+                   Grid.Row="0" Grid.Column="2"
+                Click="BackButton_OnClick"
+                Height="49" Width="165"
+                Background="Red"
+                Foreground="White"
+                HorizontalContentAlignment="Center"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="30"
+                FontFamily="Forte"
+                BorderBrush="White"
+                CornerRadius="25"
+                />
+
 
     </Grid>
 </Page>

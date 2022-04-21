@@ -8,23 +8,50 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Page.Resources>
+
+        <DataTemplate x:Key="Deck" x:DataType="local:Card">
+            <Grid Height="175"
+                  Width="125"
+                  Margin="5">
+
+                <Image Stretch="UniformToFill" Source="{x:Bind cardPicture}"
+                       VerticalAlignment="Center"/>
+            </Grid>
+
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <Grid Background="CadetBlue">
         <!--Back button-->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition />
+            <RowDefinition Height="80*" />
         </Grid.RowDefinitions>
 
-        <Grid Background="AntiqueWhite"
-              Padding="10">
-            <Button Click="BackButton_OnClick">
-                <SymbolIcon Symbol="Back" />
-            </Button>
-
-            <TextBlock Text="Store"
-                       Style="{ThemeResource TitleTextBlockStyle}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center" />
-        </Grid>
+        <NavigationView x:Name="Tabs" 
+                        PaneDisplayMode="Top"
+                        SelectionFollowsFocus="Enabled" 
+                        IsBackButtonVisible="Collapsed"
+                        Grid.Column="0" 
+                        IsSettingsVisible="False">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="World" Content="World" x:Name="World" />
+                <NavigationViewItem Icon="Flag" Content="Region" x:Name="Region" />
+                <NavigationViewItem Icon="People" Content="Friends" x:Name="Friends" />
+            </NavigationView.MenuItems>
+            <Frame x:Name="contentFrame" VerticalAlignment="Center">
+                <GridView
+                            x:Name="DecksView"
+                            MinWidth="600"
+                            HorizontalAlignment="Center"
+                            ItemsSource= "{x:Bind deckCards}"
+                            ItemTemplate="{StaticResource Deck}"
+                            IsItemClickEnabled="True"
+                            ItemClick="BasicGridView_ItemClick"
+                            SelectionMode="Single"/>
+            </Frame>
+        </NavigationView>
     </Grid>
 </Page>

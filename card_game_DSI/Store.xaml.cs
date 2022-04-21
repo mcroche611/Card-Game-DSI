@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,10 +23,31 @@ namespace card_game_DSI
     /// </summary>
     public sealed partial class Store : Page
     {
+        public ObservableCollection<Card> deckCards { get; } = new ObservableCollection<Card>();
         public Store()
         {
             this.InitializeComponent();
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (deckCards != null)
+                foreach (Card card in BoardCards.GetHandCards())
+                {
+                    deckCards.Add(card);
+                }
+
+            base.OnNavigatedTo(e);
+
+            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
+        }
+
+        private void BasicGridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
             // First, check that it's safe to ask the Frame to go backward.

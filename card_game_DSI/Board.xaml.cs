@@ -31,7 +31,6 @@ namespace card_game_DSI
         public ObservableCollection<Card> card4 { get; } = new ObservableCollection<Card>();
         public ObservableCollection<Card> handCards { get; } = new ObservableCollection<Card>();
 
-        int Num = -1;
         Card PickedCard;
         public Board()
         {
