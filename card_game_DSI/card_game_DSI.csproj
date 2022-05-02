@@ -187,6 +187,7 @@
     <Content Include="Assets\Cards\Buitre Pavo.jpg" />
     <Content Include="Assets\Cards\Cabra Negra.jpg" />
     <Content Include="Assets\Cards\Chinche Apestosa.jpg" />
+    <Content Include="Assets\Cards\common.jpg" />
     <Content Include="Assets\Cards\Conejo.jpg" />
     <Content Include="Assets\Cards\Coyote.jpg" />
     <Content Include="Assets\Cards\Cresas de Cadaver.jpg" />
@@ -223,6 +224,7 @@
     <Content Include="Assets\Cards\Rata Mochilera.jpg" />
     <Content Include="Assets\Cards\Rey Rata.jpg" />
     <Content Include="Assets\Cards\Sabueso.jpg" />
+    <Content Include="Assets\Cards\squirrel.jpg" />
     <Content Include="Assets\Cards\Tentaculo Espejo.jpg" />
     <Content Include="Assets\Cards\Tentaculo Mano.jpg" />
     <Content Include="Assets\Cards\Topo.jpg" />

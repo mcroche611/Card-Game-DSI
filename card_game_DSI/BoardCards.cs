@@ -30,6 +30,16 @@ namespace card_game_DSI
             new Card("Sabueso", "BubbleYuno", 6114, "You seem a little dirty, don't ya?", 3),
         };
 
+        public static List<Card> cardBack = new List<Card>()
+        {
+             new Card("common", "JudyVertigo", 6111, "Help me!"),
+        };
+
+        public static List<Card> squirrelCard = new List<Card>()
+        {
+             new Card("squirrel", "JudyVertigo", 6111, "Help me!"),
+        };
+
         public static IList<Card> GetBoardCards()
         {
             return boardCards;
@@ -45,6 +55,16 @@ namespace card_game_DSI
             return handCards;
         }
 
+        public static IList<Card> GetCardBack()
+        {
+            return cardBack;
+        }
+
+        public static IList<Card> GetSquirrelCard()
+        {
+            return squirrelCard;
+        }
+
         public static Card GetBoardCardById(int id)
         {
             return boardCards[id];
@@ -58,6 +78,16 @@ namespace card_game_DSI
         public static Card GetHandCardById(int id)
         {
             return handCards[id];
+        }
+
+        public static Card GetCardBackById(int id)
+        {
+            return cardBack[id];
+        }
+
+        public static Card GetSquirrelCardById(int id)
+        {
+            return squirrelCard[id];
         }
     }
 }

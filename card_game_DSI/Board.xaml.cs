@@ -30,6 +30,8 @@ namespace card_game_DSI
         public ObservableCollection<Card> card3 { get; } = new ObservableCollection<Card>();
         public ObservableCollection<Card> card4 { get; } = new ObservableCollection<Card>();
         public ObservableCollection<Card> handCards { get; } = new ObservableCollection<Card>();
+        public ObservableCollection<Card> cardBack { get; } = new ObservableCollection<Card>();
+        public ObservableCollection<Card> squirrelCard { get; } = new ObservableCollection<Card>();
 
         Card PickedCard;
         public Board()
@@ -59,6 +61,18 @@ namespace card_game_DSI
                 foreach (Card card in BoardCards.GetHandCards())
                 {
                     handCards.Add(card);
+                }
+
+            if (cardBack != null)
+                foreach (Card card in BoardCards.GetCardBack())
+                {
+                    cardBack.Add(card);
+                }
+
+            if (squirrelCard != null)
+                foreach (Card card in BoardCards.GetSquirrelCard())
+                {
+                    squirrelCard.Add(card);
                 }
 
             base.OnNavigatedTo(e);
@@ -120,6 +134,36 @@ namespace card_game_DSI
         {
             Card Item = e.Items[0] as Card;
             PickedCard = Item;
+        }
+
+        private void Squirrels_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OnlineMatch_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Deck_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Deck_DragStarting(UIElement sender, DragStartingEventArgs args)
+        {
+
+        }
+
+        private void Canvas_DragStarting(UIElement sender, DragStartingEventArgs args)
+        {
+
+        }
+
+        private void Squirrels_DragStarting(UIElement sender, DragStartingEventArgs args)
+        {
+
         }
     }
 }

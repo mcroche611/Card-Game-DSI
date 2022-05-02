@@ -205,6 +205,58 @@
                 CornerRadius="25"
                 />
 
+        <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        IsDoubleTapEnabled="False" 
+                        IsHoldingEnabled="False" 
+                        IsRightTapEnabled="False"
+                    Width="300"
+                    Grid.Row="2"
+                    Grid.Column="2">
 
+            <ScrollViewer   x:Name="Deck"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            CanDrag="True"
+                            DragStarting="Deck_DragStarting"
+                                                Width="150">
+                <Grid>
+                    <Canvas              
+                            CanDrag="True"
+                            DragStarting="Deck_DragStarting">
+
+                        <GridView   x:Name="Back"
+                                    ItemsSource= "{x:Bind cardBack}"
+                                    ItemTemplate="{StaticResource myCard}"
+                                    IsItemClickEnabled="True"
+                                    ItemClick="BasicGridView_ItemClick"
+                                    SelectionMode="Single"/>
+                    </Canvas>
+                </Grid>
+            </ScrollViewer>
+
+            <ScrollViewer   x:Name="Squirrels"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            CanDrag="True"
+                            DragStarting="Squirrels_DragStarting"
+                            Width="150"
+                            >
+                <Grid>
+                    <Canvas                
+                            CanDrag="True">
+
+                        <GridView   x:Name="Squirrel"
+                                    ItemsSource= "{x:Bind squirrelCard}"
+                                    ItemTemplate="{StaticResource myCard}"
+                                    IsItemClickEnabled="True"
+                                    ItemClick="BasicGridView_ItemClick"
+                                    SelectionMode="Single"/>
+                    </Canvas>
+                </Grid>
+            </ScrollViewer>
+
+        </StackPanel>
     </Grid>
 </Page>
