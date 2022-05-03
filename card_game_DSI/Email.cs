@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 
 namespace card_game_DSI
 {
@@ -10,18 +11,18 @@ namespace card_game_DSI
     {
         public string sender { get; set; }
         public string subject { get; set; }
-        public bool read { get; set; }
+        public Symbol symbol;
 
         public Email(string from, string body)
         {
             sender = "from " + from;
             subject = body;
-            read = false;
+            symbol = Symbol.Mail;
         }
 
         public void Open()
         {
-            read = true;
+            symbol = Symbol.Read;
         }
     }
 }
