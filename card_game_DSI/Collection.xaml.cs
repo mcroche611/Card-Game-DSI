@@ -25,7 +25,7 @@ namespace card_game_DSI
         public Collection()
         {
             this.InitializeComponent();
-            cardDescription = "Aquí estaria la descripcion de la carta";
+            cardDescription = "Pulsa en una carta para ver su descripción";
         }
 
         private void BackButton_OnClick(object sender, RoutedEventArgs e)

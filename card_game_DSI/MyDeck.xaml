@@ -72,7 +72,7 @@
 
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
-            <Grid Height="45" CornerRadius="30,30,0,0" Background="#CC195676" Margin="0,0,48,0" VerticalAlignment="Top">
+            <Grid Height="45" CornerRadius="30,30,0,0" Background="#CC195676" Margin="8,0,48,0" VerticalAlignment="Top">
 
                 <TextBlock Margin="20,0,0,0" Text="MI COLECCIÓN" 
                                FontSize="30" 

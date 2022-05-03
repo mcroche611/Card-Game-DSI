@@ -46,8 +46,18 @@
                        VerticalAlignment="Center"
                        Foreground="Black"/>
         </StackPanel>
+        <Grid Grid.Row="2" 
+        Grid.Column="1" 
+              Background="#CC195676" CornerRadius="20">
+            
+        </Grid>
 
+        <Grid Grid.Row="1" 
+        Grid.Column="1" Grid.RowSpan="2" 
+              Background="#CC195676" CornerRadius="20">
 
+        </Grid>
+        
         <GridView
         x:Name="BasicGridView"
         Grid.Row="1" 
@@ -59,9 +69,9 @@
         SelectionMode="Single"/>
 
         <Grid Grid.Row="2" Grid.Column="1">
-            <TextBlock x:Name="CardDescription"
-        FontFamily="Forte" TextWrapping="Wrap"
-        FontSize="90" HorizontalAlignment="Center"
+            <TextBlock x:Name="CardDescription" Margin="10"
+        FontFamily="Forte" TextWrapping="Wrap" Foreground="White"
+        FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center"
         Text="{x:Bind cardDescription}">
             </TextBlock>
         </Grid>
