@@ -187,7 +187,10 @@
         ItemClick="BasicGridView_ItemClick"
         SelectionMode="Single"
         CanDragItems="True"
-        DragItemsStarting="HandGridView_DragItemsStarting"/>
+        DragOver="Card_DragOver"
+        DragItemsStarting="HandGridView_DragItemsStarting"
+        AllowDrop="True"
+        Drop="HandGridView_Drop"/>
 
 
         <Button Content="Rendirse"
@@ -215,47 +218,38 @@
                     Grid.Row="2"
                     Grid.Column="2">
 
-            <ScrollViewer   x:Name="Deck"
-                            HorizontalAlignment="Stretch"
-                            VerticalAlignment="Stretch"
-                            CanDrag="True"
-                            DragStarting="Deck_DragStarting"
-                                                Width="150">
-                <Grid>
-                    <Canvas              
-                            CanDrag="True"
-                            DragStarting="Deck_DragStarting">
-
-                        <GridView   x:Name="Back"
+            <Grid  x:Name="Deck"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                   Width="150">
+                <Canvas>
+                    <GridView   x:Name="Back"
                                     ItemsSource= "{x:Bind cardBack}"
                                     ItemTemplate="{StaticResource myCard}"
                                     IsItemClickEnabled="True"
                                     ItemClick="BasicGridView_ItemClick"
-                                    SelectionMode="Single"/>
-                    </Canvas>
-                </Grid>
-            </ScrollViewer>
+                                    SelectionMode="Single"
+                                    CanDragItems="True"
+                                    DragItemsStarting="Back_DragItemsStarting"/>
+                </Canvas>
+            </Grid>
 
-            <ScrollViewer   x:Name="Squirrels"
+            <Grid x:Name="Squirrels"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
-                            CanDrag="True"
-                            DragStarting="Squirrels_DragStarting"
-                            Width="150"
-                            >
-                <Grid>
-                    <Canvas                
-                            CanDrag="True">
+                            Width="150">
+                <Canvas>
 
-                        <GridView   x:Name="Squirrel"
+                    <GridView   x:Name="Squirrel"
                                     ItemsSource= "{x:Bind squirrelCard}"
                                     ItemTemplate="{StaticResource myCard}"
                                     IsItemClickEnabled="True"
                                     ItemClick="BasicGridView_ItemClick"
-                                    SelectionMode="Single"/>
-                    </Canvas>
-                </Grid>
-            </ScrollViewer>
+                                    SelectionMode="Single"
+                                    CanDragItems="True"
+                                    DragItemsStarting="Squirrel_DragItemsStarting"/>
+                </Canvas>
+            </Grid>
 
         </StackPanel>
     </Grid>

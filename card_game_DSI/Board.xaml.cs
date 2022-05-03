@@ -25,6 +25,7 @@ namespace card_game_DSI
     public sealed partial class Board : Page
     {
         public ObservableCollection<Card> boardCards { get; } = new ObservableCollection<Card>();
+        public ObservableCollection<Card> allCards { get; } = new ObservableCollection<Card>();
         public ObservableCollection<Card> card1 { get; } = new ObservableCollection<Card>();
         public ObservableCollection<Card> card2 { get; } = new ObservableCollection<Card>();
         public ObservableCollection<Card> card3 { get; } = new ObservableCollection<Card>();
@@ -34,6 +35,7 @@ namespace card_game_DSI
         public ObservableCollection<Card> squirrelCard { get; } = new ObservableCollection<Card>();
 
         Card PickedCard;
+        bool HiddenCardPicked = false;
         public Board()
         {
             this.InitializeComponent();
@@ -50,11 +52,17 @@ namespace card_game_DSI
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            // Cosntruye las listas de ModelView a partir de la lista Modelo 
+            // Construye las listas de ModelView a partir de la lista Modelo 
             if (boardCards != null)
                 foreach (Card card in BoardCards.GetBoardCards())
                 {
                     boardCards.Add(card);
+                }
+
+            if (allCards != null)
+                foreach (Card card in BoardCards.GetAllCards())
+                {
+                    allCards.Add(card);
                 }
 
             if (handCards != null)
@@ -92,7 +100,7 @@ namespace card_game_DSI
 
         private void Card1_Drop(object sender, DragEventArgs e)
         {
-            if (card1.Count < 1 && PickedCard != null)
+            if (card1.Count < 1 && PickedCard != null && PickedCard.cardPicture != "Assets\\Cards\\common.jpg")
             {
                 card1.Add(PickedCard);
                 handCards.Remove(PickedCard);
@@ -102,7 +110,7 @@ namespace card_game_DSI
 
         private void Card2_Drop(object sender, DragEventArgs e)
         {
-            if (card2.Count < 1 && PickedCard != null)
+            if (card2.Count < 1 && PickedCard != null && PickedCard.cardPicture != "Assets\\Cards\\common.jpg")
             {
                 card2.Add(PickedCard);
                 handCards.Remove(PickedCard);
@@ -112,7 +120,7 @@ namespace card_game_DSI
 
         private void Card3_Drop(object sender, DragEventArgs e)
         {
-            if (card3.Count < 1 && PickedCard != null)
+            if (card3.Count < 1 && PickedCard != null && PickedCard.cardPicture != "Assets\\Cards\\common.jpg")
             {
                 card3.Add(PickedCard);
                 handCards.Remove(PickedCard);
@@ -122,7 +130,7 @@ namespace card_game_DSI
 
         private void Card4_Drop(object sender, DragEventArgs e)
         {
-            if (card4.Count < 1 && PickedCard != null)
+            if (card4.Count < 1 && PickedCard != null && PickedCard.cardPicture != "Assets\\Cards\\common.jpg")
             {
                 card4.Add(PickedCard);
                 handCards.Remove(PickedCard);
@@ -161,9 +169,26 @@ namespace card_game_DSI
 
         }
 
-        private void Squirrels_DragStarting(UIElement sender, DragStartingEventArgs args)
+        private void Squirrel_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
         {
+            Card Item = e.Items[0] as Card;
+            PickedCard = Item;
+        }
 
+        private void Back_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
+        {
+            Card Item = e.Items[0] as Card;
+            PickedCard = Item;
+        }
+
+        private void HandGridView_Drop(object sender, DragEventArgs e)
+        {
+            if (handCards.Count < 4 && PickedCard != null && PickedCard.cardPicture == "Assets\\Cards\\common.jpg")
+            {
+                Random rnd = new Random();
+                handCards.Add(BoardCards.GetAllCardById(rnd.Next(allCards.Count)));
+                PickedCard = null;
+            }
         }
     }
 }
