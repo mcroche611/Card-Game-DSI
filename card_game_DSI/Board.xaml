@@ -62,142 +62,146 @@
                HorizontalAlignment="Center" />
 
         <!--Cartas adversario-->
-        <GridView
-        x:Name="BoardGridView"
-        MinWidth="600"
-        Grid.Row="0" 
-        Grid.Column="1" 
-        ItemsSource= "{x:Bind boardCards}"
-        ItemTemplate="{StaticResource myCard}"
-        IsItemClickEnabled="True"
-        ItemClick="BasicGridView_ItemClick"
-        SelectionMode="Single"/>
+        <Grid Grid.Row="0" Grid.Column="1" Background="#CC195676" CornerRadius="20" VerticalAlignment="Center">
+            <GridView   x:Name="BoardGridView"
+                        MinWidth="600"
+                        HorizontalAlignment="Left"
+                        ItemsSource= "{x:Bind boardCards}"
+                        ItemTemplate="{StaticResource myCard}"
+                        IsItemClickEnabled="True"
+                        SelectionMode="Single"/>
+        </Grid>
 
-        <!--Cartas jugador-->
-        <Grid Grid.Row="1" Grid.Column="1" MinWidth="550" MaxWidth="550" HorizontalAlignment="Left">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="25*"/>
-                <ColumnDefinition Width="25*"/>
-                <ColumnDefinition Width="25*"/>
-                <ColumnDefinition Width="25*"/>
-            </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1" Background="#174860" CornerRadius="20" >
+            <!--Cartas jugador-->
+            <Grid Grid.Row="1" Grid.Column="1" MinWidth="550" MaxWidth="550" HorizontalAlignment="Left">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                </Grid.ColumnDefinitions>
 
-            <ScrollViewer   x:Name="Card1"
+                <ScrollViewer   x:Name="Card1"
                             Grid.Column="0"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
                             AllowDrop="True"
                             DragOver="Card_DragOver"
                             Drop="Card1_Drop">
-                <Grid>
-                    <Canvas AllowDrop="True"
+                    <Grid>
+                        <Canvas AllowDrop="True"
                             DragOver="Card_DragOver"
                             Drop="Card1_Drop">
 
-                        <GridView x:Name="MiCarta1"
+                            <GridView x:Name="MiCarta1"
                                     ItemsSource= "{x:Bind card1}"
                                     ItemTemplate="{StaticResource myCard}"
                                     IsItemClickEnabled="True"
-                                    ItemClick="BasicGridView_ItemClick"
-                                    SelectionMode="Single"/>
-                    </Canvas>
-                </Grid>
-            </ScrollViewer>
+                                    SelectionMode="Single"
+                                      CanDragItems="True"
+                            DragItemsStarting="MiCarta1_DragItemsStarting"/>
+                        </Canvas>
+                    </Grid>
+                </ScrollViewer>
 
-            <ScrollViewer   x:Name="Card2"
+                <ScrollViewer   x:Name="Card2"
                             Grid.Column="1"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
                             AllowDrop="True"
                             DragOver="Card_DragOver"
                             Drop="Card2_Drop">
-                <Grid>
-                    <Canvas AllowDrop="True"
+                    <Grid>
+                        <Canvas AllowDrop="True"
                             DragOver="Card_DragOver"
                             Drop="Card2_Drop">
 
-                        <GridView x:Name="MiCarta2"
+                            <GridView x:Name="MiCarta2"
                                     ItemsSource= "{x:Bind card2}"
                                     ItemTemplate="{StaticResource myCard}"
                                     IsItemClickEnabled="True"
-                                    ItemClick="BasicGridView_ItemClick"
-                                    SelectionMode="Single"/>
-                    </Canvas>
-                </Grid>
-            </ScrollViewer>
+                                    SelectionMode="Single"
+                                      CanDragItems="True"
+                            DragItemsStarting="MiCarta2_DragItemsStarting"/>
+                        </Canvas>
+                    </Grid>
+                </ScrollViewer>
 
-            <ScrollViewer   x:Name="Card3"
+                <ScrollViewer   x:Name="Card3"
                             Grid.Column="2"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
                             AllowDrop="True"
                             DragOver="Card_DragOver"
                             Drop="Card3_Drop">
-                <Grid>
-                    <Canvas AllowDrop="True"
+                    <Grid>
+                        <Canvas AllowDrop="True"
                             DragOver="Card_DragOver"
                             Drop="Card3_Drop">
 
-                        <GridView x:Name="MiCarta3"
+                            <GridView x:Name="MiCarta3"
                                     ItemsSource= "{x:Bind card3}"
                                     ItemTemplate="{StaticResource myCard}"
                                     IsItemClickEnabled="True"
-                                    ItemClick="BasicGridView_ItemClick"
-                                    SelectionMode="Single"/>
-                    </Canvas>
-                </Grid>
-            </ScrollViewer>
+                                    SelectionMode="Single"
+                                      CanDragItems="True"
+                            DragItemsStarting="MiCarta3_DragItemsStarting"/>
+                        </Canvas>
+                    </Grid>
+                </ScrollViewer>
 
-            <ScrollViewer   x:Name="Card4"
+                <ScrollViewer   x:Name="Card4"
                             Grid.Column="3"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
                             AllowDrop="True"
                             DragOver="Card_DragOver"
                             Drop="Card4_Drop">
-                <Grid>
-                    <Canvas Grid.Row="0"                 
+                    <Grid>
+                        <Canvas Grid.Row="0"                 
                             AllowDrop="True"
                             DragOver="Card_DragOver"
                             Drop="Card4_Drop">
 
-                        <GridView x:Name="MiCarta4"
+                            <GridView x:Name="MiCarta4"
                                     Grid.Row="0" 
                                     ItemsSource= "{x:Bind card4}"
                                     ItemTemplate="{StaticResource myCard}"
                                     IsItemClickEnabled="True"
-                                    ItemClick="BasicGridView_ItemClick"
-                                    SelectionMode="Single"/>
-                    </Canvas>
-                </Grid>
-            </ScrollViewer>
+                                    SelectionMode="Single"
+                                      CanDragItems="True"
+                            DragItemsStarting="MiCarta4_DragItemsStarting"/>
+                        </Canvas>
+                    </Grid>
+                </ScrollViewer>
 
+            </Grid>
         </Grid>
 
-        <!--Cartas mano del jugador-->
-        <GridView
-        x:Name="HandGridView"
-        MinWidth="600"
-        Grid.Row="2" 
-        Grid.Column="1" 
-        VerticalAlignment="Bottom"
-        ItemsSource= "{x:Bind handCards}"
-        ItemTemplate="{StaticResource myCard}"
-        IsItemClickEnabled="True"
-        ItemClick="BasicGridView_ItemClick"
-        SelectionMode="Single"
-        CanDragItems="True"
-        DragOver="Card_DragOver"
-        DragItemsStarting="HandGridView_DragItemsStarting"
-        AllowDrop="True"
-        Drop="HandGridView_Drop"/>
-
+        <Grid Grid.Row="2" Grid.Column="1" Background="#113445" CornerRadius="20">
+                <!--Cartas mano del jugador-->
+                <GridView   x:Name="HandGridView"
+                            MinWidth="600"
+                            MinHeight="300"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Left"
+                            ItemsSource= "{x:Bind handCards}"
+                            ItemTemplate="{StaticResource myCard}"
+                            IsItemClickEnabled="True"
+                            SelectionMode="Single"
+                            CanDragItems="True"
+                            DragItemsStarting="HandGridView_DragItemsStarting"
+                            AllowDrop="True"
+                            DragOver="Card_DragOver"
+                            Drop="HandGridView_Drop"/>
+        </Grid>
 
         <Button Content="Rendirse"
                    Grid.Row="0" Grid.Column="2"
                 Click="BackButton_OnClick"
                 Height="49" Width="165"
-                Background="Red"
+                Background="#4e050b"
                 Foreground="White"
                 HorizontalContentAlignment="Center"
                 HorizontalAlignment="Center"
@@ -208,12 +212,27 @@
                 CornerRadius="25"
                 />
 
+        <Grid Grid.Row="1" 
+              Grid.Column="2" 
+              Background="DarkRed" 
+              CornerRadius="100"
+              AllowDrop="True"
+              Drop="Sacrifice_Drop"
+              DragOver="Card_DragOver">
+            <TextBlock Text="Sacrificar"
+                       FontFamily="Forte"
+                       Foreground="White"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Center"
+                       FontSize="40*"/>
+        </Grid>
+
         <StackPanel Orientation="Horizontal" 
-                        HorizontalAlignment="Stretch"
-                        VerticalAlignment="Stretch"
-                        IsDoubleTapEnabled="False" 
-                        IsHoldingEnabled="False" 
-                        IsRightTapEnabled="False"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    IsDoubleTapEnabled="False" 
+                    IsHoldingEnabled="False" 
+                    IsRightTapEnabled="False"
                     Width="300"
                     Grid.Row="2"
                     Grid.Column="2">
@@ -221,13 +240,13 @@
             <Grid  x:Name="Deck"
                    HorizontalAlignment="Stretch"
                    VerticalAlignment="Stretch"
-                   Width="150">
+                   Width="150"
+                   Background="#8E673D" CornerRadius="20">
                 <Canvas>
                     <GridView   x:Name="Back"
                                     ItemsSource= "{x:Bind cardBack}"
                                     ItemTemplate="{StaticResource myCard}"
                                     IsItemClickEnabled="True"
-                                    ItemClick="BasicGridView_ItemClick"
                                     SelectionMode="Single"
                                     CanDragItems="True"
                                     DragItemsStarting="Back_DragItemsStarting"/>
@@ -235,16 +254,16 @@
             </Grid>
 
             <Grid x:Name="Squirrels"
-                            HorizontalAlignment="Stretch"
-                            VerticalAlignment="Stretch"
-                            Width="150">
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  Width="150"
+                  Background="#8E673D" CornerRadius="20">
                 <Canvas>
 
                     <GridView   x:Name="Squirrel"
                                     ItemsSource= "{x:Bind squirrelCard}"
                                     ItemTemplate="{StaticResource myCard}"
                                     IsItemClickEnabled="True"
-                                    ItemClick="BasicGridView_ItemClick"
                                     SelectionMode="Single"
                                     CanDragItems="True"
                                     DragItemsStarting="Squirrel_DragItemsStarting"/>

@@ -35,7 +35,9 @@ namespace card_game_DSI
         public ObservableCollection<Card> squirrelCard { get; } = new ObservableCollection<Card>();
 
         Card PickedCard;
-        bool HiddenCardPicked = false;
+        bool CardInPlay = false;
+        int CardInPlaySlot = -1;
+
         public Board()
         {
             this.InitializeComponent();
@@ -88,11 +90,6 @@ namespace card_game_DSI
             this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
         }
 
-        private void BasicGridView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
         private void Card_DragOver(object sender, DragEventArgs e)
         {
             e.AcceptedOperation = DataPackageOperation.Copy;
@@ -142,43 +139,24 @@ namespace card_game_DSI
         {
             Card Item = e.Items[0] as Card;
             PickedCard = Item;
-        }
-
-        private void Squirrels_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void OnlineMatch_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Deck_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Deck_DragStarting(UIElement sender, DragStartingEventArgs args)
-        {
-
-        }
-
-        private void Canvas_DragStarting(UIElement sender, DragStartingEventArgs args)
-        {
-
+            CardInPlay = false;
+            CardInPlaySlot = -1;
         }
 
         private void Squirrel_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
         {
             Card Item = e.Items[0] as Card;
             PickedCard = Item;
+            CardInPlay = false;
+            CardInPlaySlot = -1;
         }
 
         private void Back_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
         {
             Card Item = e.Items[0] as Card;
             PickedCard = Item;
+            CardInPlay = false;
+            CardInPlaySlot = -1;
         }
 
         private void HandGridView_Drop(object sender, DragEventArgs e)
@@ -189,6 +167,56 @@ namespace card_game_DSI
                 handCards.Add(BoardCards.GetAllCardById(rnd.Next(allCards.Count)));
                 PickedCard = null;
             }
+        }
+
+        private void Sacrifice_Drop(object sender, DragEventArgs e)
+        {
+            if (PickedCard != null && PickedCard.cardPicture != "Assets\\Cards\\common.jpg" && CardInPlay)
+            {
+                if (CardInPlaySlot == 1)
+                    card1.Remove(PickedCard);
+                else if (CardInPlaySlot == 2)
+                    card2.Remove(PickedCard);
+                else if (CardInPlaySlot == 3)
+                    card3.Remove(PickedCard);
+                else if (CardInPlaySlot == 4)
+                    card4.Remove(PickedCard);
+                PickedCard = null;
+                CardInPlay = false;
+                CardInPlaySlot = -1;
+            }
+        }
+
+        private void MiCarta4_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
+        {
+            Card Item = e.Items[0] as Card;
+            PickedCard = Item;
+            CardInPlay = true;
+            CardInPlaySlot = 4;
+        }
+
+        private void MiCarta3_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
+        {
+            Card Item = e.Items[0] as Card;
+            PickedCard = Item;
+            CardInPlay = true;
+            CardInPlaySlot = 3;
+        }
+
+        private void MiCarta2_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
+        {
+            Card Item = e.Items[0] as Card;
+            PickedCard = Item;
+            CardInPlay = true;
+            CardInPlaySlot = 2;
+        }
+
+        private void MiCarta1_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
+        {
+            Card Item = e.Items[0] as Card;
+            PickedCard = Item;
+            CardInPlay = true;
+            CardInPlaySlot = 1;
         }
     }
 }
