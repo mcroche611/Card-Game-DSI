@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using static System.Net.WebRequestMethods;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -56,6 +57,27 @@ namespace card_game_DSI
                 // If there's a page in the "backstack," we can call GoBack().
                 Frame.GoBack();
             }
+        }
+
+        private void Tabs_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+            FrameNavigationOptions navOptions = new FrameNavigationOptions();
+            navOptions.TransitionInfoOverride = args.RecommendedNavigationTransitionInfo;
+            Type pageType;
+            switch (sender.PaneTitle) {
+                case "Sobres":
+                default:
+                    pageType = typeof(Mail);
+                    break;
+                case "Intercambio":
+                    pageType = typeof(MyDeck);
+                    break;
+                case "Comprar monedas":
+                    pageType = typeof(Board);
+                    break;
+            }
+            //sender.PaneCustomContent = pageType;
+
         }
     }
 }

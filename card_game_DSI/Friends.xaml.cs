@@ -24,6 +24,7 @@ namespace card_game_DSI
     public sealed partial class Friends : Page
     {
         public ObservableCollection<User> friends { get; } = new ObservableCollection<User>();
+        private string content;
 
         public Friends()
         {
@@ -50,6 +51,26 @@ namespace card_game_DSI
             base.OnNavigatedTo(e);
 
             this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
+        }
+
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var item in friends.ToList())
+            {
+                if (item.username == content)
+                {
+                    friends.Remove(item);
+                }
+            }
+            content = "";
+        }
+
+        private void ImageGridView_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            ListView listView = (ListView)sender;
+            menuFlyout.ShowAt(listView, e.GetPosition(listView));
+            var a = ((FrameworkElement)e.OriginalSource).DataContext as User;
+            content = a.username;
         }
     }
 }

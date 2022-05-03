@@ -13,14 +13,16 @@
                       x:DataType="local:Email">
             <Grid Height="40"
                   Margin="8"
-                  MinWidth="500">
+                  MinWidth="700">
                 <StackPanel VerticalAlignment="Center"
                             Orientation="Horizontal">
                     <SymbolIcon x:Name="mailIcon"
-                                Symbol="{x:Bind symbol, Mode=TwoWay}"
-                                Margin="0,0,20,0"/>
+                                Symbol="{x:Bind symbol, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,20,0"
+                                Foreground="Black"/>
                     <TextBlock Text="{x:Bind subject}"
-                               Foreground="Black"/>
+                               Foreground="Black"
+                               FontSize="20"/>
                 </StackPanel>
                 <TextBlock Text="{x:Bind sender}"  
                            TextAlignment="Right"

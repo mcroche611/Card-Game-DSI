@@ -25,33 +25,71 @@
 
     <Grid Background="CadetBlue">
         <!--Back button-->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="80*" />
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top">
+            <Button Click="BackButton_OnClick" 
+                    Background="Transparent"
+                    Foreground="Black">
+                <SymbolIcon Symbol="Back"/>
+            </Button>
+            <TextBlock Text="ESC"
+                       VerticalAlignment="Center"
+                       Foreground="Black"/>
+        </StackPanel>
 
         <NavigationView x:Name="Tabs" 
                         PaneDisplayMode="Top"
                         SelectionFollowsFocus="Enabled" 
                         IsBackButtonVisible="Collapsed"
-                        Grid.Column="0" 
-                        IsSettingsVisible="False">
+                        Grid.Column="1" 
+                        IsSettingsVisible="False"
+                        ItemInvoked="Tabs_ItemInvoked">
             <NavigationView.MenuItems>
-                <NavigationViewItem Icon="World" Content="World" x:Name="World" />
-                <NavigationViewItem Icon="Flag" Content="Region" x:Name="Region" />
-                <NavigationViewItem Icon="People" Content="Friends" x:Name="Friends" />
+                <NavigationViewItem Icon="Shop" Content="Sobres" x:Name="Sobres" />
+                <NavigationViewItem Icon="ReShare" Content="Intercambio" x:Name="Intercambio" />
+                <NavigationViewItem Icon="Target" Content="Comprar monedas" x:Name="ComprarMonedas" />
             </NavigationView.MenuItems>
-            <Frame x:Name="contentFrame" VerticalAlignment="Center">
-                <GridView
-                            x:Name="DecksView"
-                            MinWidth="600"
-                            HorizontalAlignment="Center"
-                            ItemsSource= "{x:Bind deckCards}"
-                            ItemTemplate="{StaticResource Deck}"
-                            IsItemClickEnabled="True"
-                            ItemClick="BasicGridView_ItemClick"
-                            SelectionMode="Single"/>
-            </Frame>
+            <NavigationView.Content>
+                <Grid>
+                    <StackPanel HorizontalAlignment="Center" 
+                            VerticalAlignment="Center">
+                        <Image Source="Assets/Cards/Lobo Atrofiado.jpg"
+                           Width="50"/>
+                        <Button Height="20">
+                            <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0">
+                                <SymbolIcon Symbol="Save"
+                                    Foreground="Black"/>
+                                <TextBlock Text="Comprar"
+                                   VerticalAlignment="Center"
+                                   Foreground="Black"
+                                   FontSize="4"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                    <GridView/>
+                </Grid>
+            </NavigationView.Content>
         </NavigationView>
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Grid.Column="2"
+                    Margin="10">
+            <SymbolIcon Symbol="Save"
+                        Foreground="Black"
+                        Margin="0, 0, 8, 0"/>
+            <TextBlock Text="5000"
+                       VerticalAlignment="Center"
+                       Foreground="Black"/>
+        </StackPanel>
     </Grid>
 </Page>

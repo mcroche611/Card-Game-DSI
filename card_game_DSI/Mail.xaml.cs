@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -21,7 +22,7 @@ namespace card_game_DSI
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class Mail : Page
+    public partial class Mail : Page
     {
         public ObservableCollection<Email> inbox { get; } = new ObservableCollection<Email>();
 
@@ -54,7 +55,8 @@ namespace card_game_DSI
 
         private void ImageGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            (e.ClickedItem as Email).Open();
+            Email email = e.ClickedItem as Email;
+            email.Open();
         }
     }
 }
