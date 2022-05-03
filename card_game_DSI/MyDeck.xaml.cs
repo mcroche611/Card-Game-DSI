@@ -21,6 +21,7 @@ namespace card_game_DSI
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
+
     public sealed partial class MyDeck : Page
     {
 
@@ -55,15 +56,31 @@ namespace card_game_DSI
 
         private void BasicGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            myDeck.Add(e.ClickedItem as Card);
+            //myDeck.Add(e.ClickedItem as Card);
 
         }
 
         private void BasicGridView2_ItemClick(object sender, ItemClickEventArgs e)
         {
-            myDeck.Remove(e.ClickedItem as Card);
+            //myDeck.Remove(e.ClickedItem as Card);
 
         }
 
+        private void BasicGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            for(int i = 0; i < e.AddedItems.Count; i++)
+            {
+                myDeck.Add(e.AddedItems[i] as Card);
+
+            }
+            for (int i = 0; i < e.RemovedItems.Count; i++)
+            {
+                myDeck.Remove(e.RemovedItems[i] as Card);
+
+            }
+            //if(e.RemovedItems.Count >= 0)
+            //myDeck.Remove(e.RemovedItems[0] as Card);
+
+        }
     }
 }

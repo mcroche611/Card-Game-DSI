@@ -89,7 +89,8 @@
         ItemTemplate="{StaticResource myCard}"
         IsItemClickEnabled="True"
         ItemClick="BasicGridView_ItemClick"
-        SelectionMode="Multiple"/>
+        SelectionMode="Multiple"
+        SelectionChanged="BasicGridView_SelectionChanged"/>
 
 
     </Grid>
