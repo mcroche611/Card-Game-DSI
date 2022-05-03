@@ -65,8 +65,9 @@
                 <Grid.BorderBrush>
                     <AcrylicBrush TintColor="#CC195676"/>
                 </Grid.BorderBrush>
-                <GridView
-        x:Name="BasicGridView2"
+
+                <GridView        x:Name="BasicGridView2"
+                                 
         Grid.Row="1" 
         Grid.Column="2" 
         Margin="0,0,0,0"
@@ -74,7 +75,16 @@
         ItemTemplate="{StaticResource myCard}"
         IsItemClickEnabled="True"
         ItemClick="BasicGridView2_ItemClick"
-        SelectionMode="Single"/>
+        SelectionMode="Single"
+        HorizontalContentAlignment="Center">
+
+                    <GridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="Margin"  Value="0, 0, -40, 0"/>
+                    </Style>
+                    </GridView.ItemContainerStyle>
+
+                </GridView>
 
 
             </Grid>
