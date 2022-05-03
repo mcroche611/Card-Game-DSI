@@ -122,12 +122,21 @@
     <Compile Include="Board.xaml.cs">
       <DependentUpon>Board.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BuyCoins.xaml.cs">
+      <DependentUpon>BuyCoins.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Campaign.xaml.cs">
       <DependentUpon>Campaign.xaml</DependentUpon>
     </Compile>
     <Compile Include="Card.cs" />
     <Compile Include="BoardCards.cs" />
     <Compile Include="Email.cs" />
+    <Compile Include="Exchange.xaml.cs">
+      <DependentUpon>Exchange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Foils.xaml.cs">
+      <DependentUpon>Foils.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Inbox.cs" />
     <Compile Include="InputHandler.cs" />
     <Compile Include="CardCollection.cs" />
@@ -236,7 +245,17 @@
     <Content Include="Assets\Cards\Zarigueya.jpg" />
     <Content Include="Assets\Classification.png" />
     <Content Include="Assets\Collection.png" />
+    <Content Include="Assets\descarga.scale-100.png" />
+    <Content Include="Assets\descarga.scale-125.png" />
+    <Content Include="Assets\descarga.scale-150.png" />
+    <Content Include="Assets\descarga.scale-200.png" />
+    <Content Include="Assets\descarga.scale-400.png" />
     <Content Include="Assets\Friends.png" />
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\Left vine.png" />
     <Content Include="Assets\Mail.png" />
     <Content Include="Assets\My deck.png" />
@@ -249,14 +268,49 @@
     <Content Include="Assets\Right vine.png" />
     <Content Include="Assets\scale.png" />
     <Content Include="Assets\Settings.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
     <Content Include="Assets\Store.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
@@ -267,6 +321,10 @@
     <Page Include="Board.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BuyCoins.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Campaign.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -279,6 +337,14 @@
     <Page Include="Collection.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Exchange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Foils.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Friends.xaml">
       <Generator>MSBuild:Compile</Generator>

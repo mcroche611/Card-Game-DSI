@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#abd2ab">
 
     <Page.Resources>
 
@@ -23,7 +23,7 @@
 
     </Page.Resources>
 
-    <Grid Background="CadetBlue">
+    <Grid>
         <!--Back button-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"/>
@@ -55,28 +55,6 @@
                 <NavigationViewItem Icon="ReShare" Content="Intercambio" x:Name="Intercambio" />
                 <NavigationViewItem Icon="Target" Content="Comprar monedas" x:Name="ComprarMonedas" />
             </NavigationView.MenuItems>
-            <NavigationView.Content>
-                <Grid>
-                    <StackPanel HorizontalAlignment="Center" 
-                            VerticalAlignment="Center">
-                        <Image Source="Assets/Cards/Lobo Atrofiado.jpg"
-                           Width="50"/>
-                        <Button Height="20">
-                            <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Center"
-                                Margin="0">
-                                <SymbolIcon Symbol="Save"
-                                    Foreground="Black"/>
-                                <TextBlock Text="Comprar"
-                                   VerticalAlignment="Center"
-                                   Foreground="Black"
-                                   FontSize="4"/>
-                            </StackPanel>
-                        </Button>
-                    </StackPanel>
-                    <GridView/>
-                </Grid>
-            </NavigationView.Content>
         </NavigationView>
 
         <StackPanel Orientation="Horizontal"

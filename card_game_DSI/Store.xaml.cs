@@ -28,6 +28,8 @@ namespace card_game_DSI
         public Store()
         {
             this.InitializeComponent();
+
+            Tabs.Content = new Foils();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -43,12 +45,6 @@ namespace card_game_DSI
             this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
         }
 
-        private void BasicGridView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
             // First, check that it's safe to ask the Frame to go backward.
@@ -61,23 +57,18 @@ namespace card_game_DSI
 
         private void Tabs_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
-            FrameNavigationOptions navOptions = new FrameNavigationOptions();
-            navOptions.TransitionInfoOverride = args.RecommendedNavigationTransitionInfo;
-            Type pageType;
-            switch (sender.PaneTitle) {
+            switch (args.InvokedItem) {
                 case "Sobres":
                 default:
-                    pageType = typeof(Mail);
+                    sender.Content = new Foils();
                     break;
                 case "Intercambio":
-                    pageType = typeof(MyDeck);
+                    sender.Content = new Exchange();
                     break;
                 case "Comprar monedas":
-                    pageType = typeof(Board);
+                    sender.Content = new BuyCoins();
                     break;
             }
-            //sender.PaneCustomContent = pageType;
-
         }
     }
 }
