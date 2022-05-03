@@ -10,34 +10,34 @@ namespace card_game_DSI
     {
         public static List<Card> boardCards = new List<Card>()
         {
-            new Card("Rey Rata", "Rey Rata", 6123),
-            new Card("Rana Toro", "Rana Toro", 6120, "This will be an interesting research"),
-            new Card("Sabueso", "BubbleYuno", 6114, "You seem a little dirty, don't ya?"),
-            new Card("Vibora", "JudyVertigo", 6111, "Help me!"),
+            new Card("Rey Rata", "Rey Rata"),
+            new Card("Rana Toro", "Rana Toro", "This will be an interesting research"),
+            new Card("Sabueso", "BubbleYuno", "You seem a little dirty, don't ya?"),
+            new Card("Vibora", "JudyVertigo", "Help me!"),
         };
 
         public static List<Card> boardCards2 = new List<Card>()
         {
-             new Card("Vibora", "JudyVertigo", 6111, "Help me!"),
-            new Card("Rey Rata", "Kaycee21", 6123),
+             new Card("Vibora", "JudyVertigo", "Help me!"),
+            new Card("Rey Rata", "Kaycee21"),
         };
 
         public static List<Card> handCards = new List<Card>()
         {
-             new Card("Vibora", "JudyVertigo", 6111, "Help me!", 0),
-            new Card("Rey Rata", "Kaycee21", 6123, "hello", 1),
-            new Card("Rana Toro", "Rana Toro", 6120, "This will be an interesting research", 2),
-            new Card("Sabueso", "BubbleYuno", 6114, "You seem a little dirty, don't ya?", 3),
+             new Card("Vibora", "JudyVertigo", "Help me!", 0),
+            new Card("Rey Rata", "Kaycee21", "hello", 1),
+            new Card("Rana Toro", "Rana Toro", "This will be an interesting research", 2),
+            new Card("Sabueso", "BubbleYuno", "You seem a little dirty, don't ya?", 3),
         };
 
         public static List<Card> cardBack = new List<Card>()
         {
-             new Card("common", "JudyVertigo", 6111, "Help me!"),
+             new Card("common", "JudyVertigo", "Help me!"),
         };
 
         public static List<Card> squirrelCard = new List<Card>()
         {
-             new Card("squirrel", "JudyVertigo", 6111, "Help me!"),
+             new Card("squirrel", "JudyVertigo", "Help me!"),
         };
 
         public static IList<Card> GetBoardCards()

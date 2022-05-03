@@ -11,52 +11,63 @@
     <Grid>
         <!--Back button-->
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="90*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="90*"/>
 
-        <Grid Background="AntiqueWhite"
-              Padding="10">
-            <Button Click="BackButton_OnClick">
-                <SymbolIcon Symbol="Back" />
-            </Button>
-
-            <TextBlock Text="Campaign"
-                       Style="{ThemeResource TitleTextBlockStyle}"
+        </Grid.ColumnDefinitions>
+        <Viewbox>
+            <Grid HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left">
+                    <Button Click="BackButton_OnClick" 
+                    Background="Transparent"
+                    Foreground="Black">
+                        <SymbolIcon Symbol="Back"/>
+                    </Button>
+                    <TextBlock Text="ESC"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center" />
-        </Grid>
-
+                       Foreground="Black"/>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
         <!--Botón para ir a la página 1-->
-        <Button Content="Go To Battle 1"
+        <Viewbox Grid.Row="1" Grid.Column="1">
+            <Grid Height="955" Width="1681">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="44*"/>
+                    <ColumnDefinition Width="1637*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Content="Go To Battle 1"
                 Click="BoardButton_OnClick"
                 VerticalAlignment="Top"
-                Grid.Row="1"
-                Margin="727,718,0,0" Height="41" Width="143" />
-        <Button Content="Go To Battle 1"
+                Margin="683,718,0,0" Height="41" Width="143" Grid.Column="1" />
+                <Button Content="Go To Battle 1"
                 Click="BoardButton_OnClick"
                 VerticalAlignment="Top"
-                Grid.Row="1"
-                Margin="994,525,0,0" Height="41" Width="142" />
-        <Button Content="Go To Battle 1"
+                Margin="950,525,0,0" Height="41" Width="142" Grid.Column="1" />
+                <Button Content="Go To Battle 1"
                 Click="BoardButton_OnClick"
                 VerticalAlignment="Top"
-                Grid.Row="1"
-                Margin="436,525,0,0" Height="42" Width="143" />
-        <Button Content="Go To Battle 1"
+                Margin="392,525,0,0" Height="42" Width="143" Grid.Column="1" />
+                <Button Content="Go To Battle 1"
                 Click="BoardButton_OnClick"
                 VerticalAlignment="Top"
-                Grid.Row="1"
-                Margin="923,335,0,0" Height="41" Width="143" />
-        <Button Content="Go To Battle 1"
+                Margin="879,335,0,0" Height="41" Width="143" Grid.Column="1" />
+                <Button Content="Go To Battle 1"
                 Click="BoardButton_OnClick"
                 VerticalAlignment="Top"
-                Grid.Row="1"
-                Margin="277,335,0,0" Height="41" Width="143" />
-        <Button Content="Go To Battle 1"
+                Margin="233,335,0,0" Height="41" Width="143" Grid.Column="1" />
+                <Button Content="Go To Battle 1"
             Click="BoardButton_OnClick"
             VerticalAlignment="Top"
-            Grid.Row="1"
-            Margin="1151,335,0,0" Height="41" Width="143" />
+            Margin="1107,335,0,0" Height="41" Width="143" Grid.Column="1" />
+            </Grid>
+        </Viewbox>
     </Grid>
 </Page>

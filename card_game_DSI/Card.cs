@@ -11,18 +11,14 @@ namespace card_game_DSI
         public string id { get; set; }
         public string description { get; set; }
         public string cardPicture { get; set; }
-        public string status { get; set; }
-        public int points { get; set; }
         public int num { get; set; }
 
-        public Card(string identificator, string name, int punctuation,
-            string statusMessage = "Descripción", int num = 0)
+        public Card(string identificator, string name,
+            string cardDescription = "Descripción", int num = 0)
         {
             id = identificator;
-            description = identificator;
+            description = "La carta " + name + " " + cardDescription;
             cardPicture = $"Assets\\Cards\\{id}.jpg";
-            status = statusMessage;
-            points = punctuation;
         }
     }
 }
