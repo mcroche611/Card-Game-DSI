@@ -73,8 +73,8 @@
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid Height="45" CornerRadius="30,30,0,0" Background="#CC195676" Margin="8,0,48,0" VerticalAlignment="Top">
-
-                <TextBlock Margin="20,0,0,0" Text="MI COLECCIÓN" 
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="20,0,0,0" Text="MI COLECCIÓN" 
                                FontSize="30" 
                                FontWeight="Bold"
                                Foreground="White" Grid.RowSpan="2">
@@ -82,7 +82,26 @@
 
 
 
-                </TextBlock>
+                    </TextBlock>
+                    <TextBlock Margin="80,0,0,0" Text="Ordenar por:" 
+                               FontSize="26" 
+                               FontWeight="Bold"
+                               Foreground="White" Grid.RowSpan="2">
+
+
+
+
+                    </TextBlock>
+                    <ComboBox Margin="20,9,0,0" Width="120">
+                        <x:String>Vida</x:String>
+                        <x:String>PS</x:String>
+                        <x:String>Ataque</x:String>
+                        <x:String>Tipo</x:String>
+
+                    </ComboBox>
+
+                </StackPanel>
+                
             </Grid>
         </Grid>
         
