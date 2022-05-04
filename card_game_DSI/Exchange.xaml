@@ -6,9 +6,94 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="AntiqueWhite">
+
+    <Page.Resources>
+        <DataTemplate x:Key="ExchangeItem"
+                      x:DataType="local:Add">
+            <Grid Height="200" 
+                  Margin="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition MaxWidth="400" Width="400*"/>
+                    <ColumnDefinition Width="250*"/>
+                    <ColumnDefinition Width="150*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel VerticalAlignment="Center">
+                    <Image Source="{x:Bind profilePicture}"
+                           Margin="10"
+                           MaxHeight="80"
+                           MaxWidth="80"/>
+                    <TextBlock Text="{x:Bind subject}"  
+                               VerticalAlignment="Center"
+                               Foreground="#20506a"
+                               FontSize="16"
+                               Margin="10"
+                               HorizontalAlignment="Center"
+                               TextWrapping="Wrap"/>
+                </StackPanel>
+                <TextBlock Text="{x:Bind sender}"
+                           VerticalAlignment="Center"
+                           Foreground="Black"
+                           FontSize="20"
+                           TextWrapping="Wrap"
+                           Grid.Column="1"
+                           Margin="20"/>
+                <Image Source="{x:Bind itemPicture}"
+                       VerticalAlignment="Center"
+                       Grid.Column="2"/>
+                <Button Height="80"
+                        HorizontalAlignment="Center"
+                        Margin="10"
+                        Background="SeaGreen"
+                        Grid.Column="3"
+                        Width="150"
+                        Click="Button_Click_2">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0">
+                        <SymbolIcon Symbol="Save"
+                                    Foreground="LightGoldenrodYellow"
+                                    Margin="5"/>
+                        <TextBlock Text="{x:Bind precio}"
+                                   VerticalAlignment="Center"
+                                   Foreground="LightGoldenrodYellow"
+                                   FontSize="20"
+                                   Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar un intercambio. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Button Click="Button_Click" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                    <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
 
     <Grid>
-
+        <ListView x:Name="ImageGridView" 
+                  ItemsSource="{x:Bind addList}"
+                  ItemTemplate="{StaticResource ExchangeItem}"
+                  HorizontalContentAlignment="Stretch"
+                  SelectionMode="None"
+                  Width="Auto"
+                  Height="Auto">
+        </ListView>
     </Grid>
 </Page>

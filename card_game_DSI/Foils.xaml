@@ -15,7 +15,8 @@
         </Grid.ColumnDefinitions>
         <Viewbox>
             <StackPanel HorizontalAlignment="Center" 
-                            VerticalAlignment="Center">
+                        VerticalAlignment="Center"
+                        Margin="50">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Oferta especial"
                                Foreground="Black"
@@ -31,12 +32,16 @@
                            Foreground="Gold"
                            FontSize="16"
                            Margin="10,0,0,10"/>
-                <Image Source="Assets/Cards/Lobo Atrofiado.jpg"
-                       Width="200"/>
+                <Border BorderThickness="4" 
+                                BorderBrush="Gold">
+                    <Image Source="Assets/Cards/Lobo Atrofiado.jpg"
+                           Width="200"/>
+                </Border>
                 <Button Height="50"
                         HorizontalAlignment="Center"
                         Margin="10"
-                        Background="SeaGreen">
+                        Background="SeaGreen"
+                        Click="Button_Click_2">
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
                                 Margin="0">
@@ -55,7 +60,221 @@
                                    TextDecorations="Strikethrough"
                                    Margin="10,0,0,0"/>
                     </StackPanel>
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                    <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
                 </Button>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Column="1">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel HorizontalAlignment="Center" 
+                                VerticalAlignment="Center">
+                        <Border BorderThickness="2" 
+                                BorderBrush="DarkGreen">
+                            <Image Source="Assets/Cards/Ardillas.jpg"
+                                   Width="200"/>
+                        </Border>
+                        <Button Height="50"
+                                HorizontalAlignment="Center"
+                                Margin="10"
+                                Background="SeaGreen"
+                                Click="Button_Click_2">
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center"
+                                        Margin="0">
+                                <SymbolIcon Symbol="Save"
+                                            Foreground="LightGoldenrodYellow"
+                                            Margin="5"/>
+                                <TextBlock Text="50"
+                                           VerticalAlignment="Center"
+                                           Foreground="LightGoldenrodYellow"
+                                           FontSize="20"
+                                           Margin="5,0,0,0"/>
+                            </StackPanel>
+                            <Button.Flyout>
+                                <Flyout>
+                                    <StackPanel>
+                                        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                        <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                            <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                            <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                Margin="100">
+                        <Border BorderThickness="2" 
+                                BorderBrush="DarkGreen">
+                            <Image Source="Assets/Cards/Cartas.jpg"
+                                   Width="200"/>
+                        </Border>
+                        <Button Height="50"
+                                HorizontalAlignment="Center"
+                                Margin="10"
+                                Background="SeaGreen"
+                                Click="Button_Click_2">
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center"
+                                        Margin="0">
+                                <SymbolIcon Symbol="Save"
+                                            Foreground="LightGoldenrodYellow"
+                                            Margin="5"/>
+                                <TextBlock Text="300"
+                                           VerticalAlignment="Center"
+                                           Foreground="LightGoldenrodYellow"
+                                           FontSize="20"
+                                           Margin="5,0,0,0"/>
+                            </StackPanel>
+                            <Button.Flyout>
+                                <Flyout>
+                                    <StackPanel>
+                                        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                        <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                            <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                            <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel HorizontalAlignment="Center" 
+                                VerticalAlignment="Top">
+                        <Border BorderThickness="2" 
+                                BorderBrush="DarkGreen">
+                            <Image Source="Assets/Cards/Objetos.jpg"
+                                   Width="200"/>
+                        </Border>
+                        <Button Height="50"
+                                HorizontalAlignment="Center"
+                                Margin="10"
+                                Background="SeaGreen"
+                                Click="Button_Click_2">
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center"
+                                        Margin="0">
+                                <SymbolIcon Symbol="Save"
+                                            Foreground="LightGoldenrodYellow"
+                                            Margin="5"/>
+                                <TextBlock Text="1000"
+                                           VerticalAlignment="Center"
+                                           Foreground="LightGoldenrodYellow"
+                                           FontSize="20"
+                                           Margin="5,0,0,0"/>
+                            </StackPanel>
+                            <Button.Flyout>
+                                <Flyout>
+                                    <StackPanel>
+                                        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                        <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                            <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                            <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                Margin="100, 0, 100, 100">
+                        <Border BorderThickness="2" 
+                                BorderBrush="DarkGreen">
+                            <Image Source="Assets/Cards/Totems.jpg"
+                               Width="200"/>
+                        </Border>
+                        <Button Height="50"
+                                HorizontalAlignment="Center"
+                                Margin="10"
+                                Background="SeaGreen"
+                                Click="Button_Click_2">
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center"
+                                        Margin="0">
+                                <SymbolIcon Symbol="Save"
+                                            Foreground="LightGoldenrodYellow"
+                                            Margin="5"/>
+                                <TextBlock Text="1200"
+                                           VerticalAlignment="Center"
+                                           Foreground="LightGoldenrodYellow"
+                                           FontSize="20"
+                                           Margin="5,0,0,0"/>
+                            </StackPanel>
+                            <Button.Flyout>
+                                <Flyout>
+                                    <StackPanel>
+                                        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                        <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                            <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                            <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
         </Viewbox>
     </Grid>

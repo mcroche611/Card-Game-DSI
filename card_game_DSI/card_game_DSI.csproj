@@ -130,10 +130,12 @@
     </Compile>
     <Compile Include="Card.cs" />
     <Compile Include="BoardCards.cs" />
+    <Compile Include="Add.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="Exchange.xaml.cs">
       <DependentUpon>Exchange.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ExchangeList.cs" />
     <Compile Include="Foils.xaml.cs">
       <DependentUpon>Foils.xaml</DependentUpon>
     </Compile>
@@ -191,10 +193,12 @@
     <Content Include="Assets\Cards\Alfa.jpg" />
     <Content Include="Assets\Cards\Amalgama.jpg" />
     <Content Include="Assets\Cards\Ardilla.jpg" />
+    <Content Include="Assets\Cards\Ardillas.jpg" />
     <Content Include="Assets\Cards\Armiño.jpg" />
     <Content Include="Assets\Cards\Berrendo.jpg" />
     <Content Include="Assets\Cards\Buitre Pavo.jpg" />
     <Content Include="Assets\Cards\Cabra Negra.jpg" />
+    <Content Include="Assets\Cards\Cartas.jpg" />
     <Content Include="Assets\Cards\Chinche Apestosa.jpg" />
     <Content Include="Assets\Cards\common.jpg" />
     <Content Include="Assets\Cards\Conejo.jpg" />
@@ -227,17 +231,21 @@
     <Content Include="Assets\Cards\Murcielago.jpg" />
     <Content Include="Assets\Cards\Niña 13.jpg" />
     <Content Include="Assets\Cards\Nutria de Rio.jpg" />
+    <Content Include="Assets\Cards\Objetos.jpg" />
     <Content Include="Assets\Cards\Ouroboros.jpg" />
+    <Content Include="Assets\Cards\Pruebas-Beneficios.jpg" />
     <Content Include="Assets\Cards\Puercoespin.jpg" />
     <Content Include="Assets\Cards\Rana Toro.jpg" />
     <Content Include="Assets\Cards\Rata Mochilera.jpg" />
     <Content Include="Assets\Cards\Rey Rata.jpg" />
     <Content Include="Assets\Cards\Sabueso.jpg" />
+    <Content Include="Assets\Cards\Separadores.jpg" />
     <Content Include="Assets\Cards\squirrel.jpg" />
     <Content Include="Assets\Cards\Tentaculo Espejo.jpg" />
     <Content Include="Assets\Cards\Tentaculo Mano.jpg" />
     <Content Include="Assets\Cards\Topo.jpg" />
     <Content Include="Assets\Cards\Tortuga de Rio.jpg" />
+    <Content Include="Assets\Cards\Totems.jpg" />
     <Content Include="Assets\Cards\Uapiti Cervatillo.jpg" />
     <Content Include="Assets\Cards\Uapiti Largo.jpg" />
     <Content Include="Assets\Cards\Urayuli.jpg" />
@@ -251,6 +259,11 @@
     <Content Include="Assets\descarga.scale-200.png" />
     <Content Include="Assets\descarga.scale-400.png" />
     <Content Include="Assets\Friends.png" />
+    <Content Include="Assets\Item Pictures\1.png" />
+    <Content Include="Assets\Item Pictures\2.png" />
+    <Content Include="Assets\Item Pictures\3.png" />
+    <Content Include="Assets\Item Pictures\4.png" />
+    <Content Include="Assets\Item Pictures\5.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
