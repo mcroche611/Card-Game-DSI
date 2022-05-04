@@ -22,9 +22,24 @@ namespace card_game_DSI
     /// </summary>
     public sealed partial class BuyCoins : Page
     {
+        Button selected;
+
         public BuyCoins()
         {
             this.InitializeComponent();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (selected.Flyout is Flyout f)
+            {
+                f.Hide();
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            selected = sender as Button;
         }
     }
 }

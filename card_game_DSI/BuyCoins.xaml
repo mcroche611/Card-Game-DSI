@@ -19,5 +19,398 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+
+        <Viewbox Margin="20">
+            <StackPanel>
+                <TextBlock Text="Floppy disk"
+                           Foreground="Black"
+                           FontSize="42"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center"/>
+                <Image Source="Assets/1.png"
+                       Height="400"/>
+                <Button Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="10"
+                        Background="SeaGreen"
+                        Click="Button_Click_2">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0">
+                        <TextBlock Text="0,99€"
+                                   VerticalAlignment="Center"
+                                   Foreground="LightGoldenrodYellow"
+                                   FontSize="36"
+                                   Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                    <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="1"
+                 Margin="20">
+            <StackPanel>
+                <TextBlock Text="Paquete de Floppy disks"
+                           Foreground="Black"
+                           FontSize="42"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                <Image Source="Assets/2.png"
+                       Height="400"/>
+                <Button Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="10"
+                        Background="SeaGreen"
+                        Click="Button_Click_2">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0">
+                        <TextBlock Text="2,99€"
+                                   VerticalAlignment="Center"
+                                   Foreground="LightGoldenrodYellow"
+                                   FontSize="36"
+                                   Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                    <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="2"
+                 Margin="20">
+            <StackPanel>
+                <TextBlock Text="Decena de Floppy disks"
+                           Foreground="Black"
+                           FontSize="42"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                <Image Source="Assets/3.png"
+                       Height="400"/>
+                <Button Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="10"
+                        Background="SeaGreen"
+                        Click="Button_Click_2">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0">
+                        <TextBlock Text="9,99€"
+                                   VerticalAlignment="Center"
+                                   Foreground="LightGoldenrodYellow"
+                                   FontSize="36"
+                                   Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                    <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="3"
+                 Margin="20">
+            <StackPanel>
+                <TextBlock Text="Surtido de Floppy disks"
+                           Foreground="Black"
+                           FontSize="42"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                <Image Source="Assets/4.png"
+                       Height="400"/>
+                <Button Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="10"
+                        Background="SeaGreen"
+                        Click="Button_Click_2">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0">
+                        <TextBlock Text="24,99€"
+                                   VerticalAlignment="Center"
+                                   Foreground="LightGoldenrodYellow"
+                                   FontSize="36"
+                                   Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                    <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Row="1"
+                 Margin="20">
+            <StackPanel>
+                <TextBlock Text="Caja de Floppy disks"
+                           Foreground="Black"
+                           FontSize="42"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                <Image Source="Assets/5.png"
+                       Height="400"/>
+                <Button Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="10"
+                        Background="SeaGreen"
+                        Click="Button_Click_2">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0">
+                        <TextBlock Text="49,99€"
+                                   VerticalAlignment="Center"
+                                   Foreground="LightGoldenrodYellow"
+                                   FontSize="36"
+                                   Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                    <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="1"
+                 Grid.Row="1"
+                 Margin="20">
+            <StackPanel>
+                <TextBlock Text="Entrega de Floppy disks"
+                           Foreground="Black"
+                           FontSize="42"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                <Image Source="Assets/6.png"
+                       Height="400"/>
+                <Button Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="10"
+                        Background="SeaGreen"
+                        Click="Button_Click_2">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0">
+                        <TextBlock Text="74,99€"
+                                   VerticalAlignment="Center"
+                                   Foreground="LightGoldenrodYellow"
+                                   FontSize="36"
+                                   Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                    <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="2"
+                 Grid.Row="1"
+                 Margin="20">
+            <StackPanel>
+                <TextBlock Text="Camión de Floppy disks"
+                           Foreground="Black"
+                           FontSize="42"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                <Image Source="Assets/7.png"
+                       Height="400"/>
+                <Button Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="10"
+                        Background="SeaGreen"
+                        Click="Button_Click_2">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0">
+                        <TextBlock Text="99,99€"
+                                   VerticalAlignment="Center"
+                                   Foreground="LightGoldenrodYellow"
+                                   FontSize="36"
+                                   Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                    <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="3"
+                 Grid.Row="1"
+                 Margin="20">
+            <StackPanel>
+                <TextBlock Text="MicroSD"
+                           Foreground="Black"
+                           FontSize="42"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                <Image Source="Assets/8.png"
+                       Height="400"/>
+                <Button Height="50"
+                        HorizontalAlignment="Center"
+                        Margin="10"
+                        Background="SeaGreen"
+                        Click="Button_Click_2">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0">
+                        <TextBlock Text="129,99€"
+                                   VerticalAlignment="Center"
+                                   Foreground="LightGoldenrodYellow"
+                                   FontSize="36"
+                                   Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" 
+                                           Text="Vas a realizar una compra. ¿Quieres continuar?" 
+                                           Margin="0,0,0,12"
+                                           MaxWidth="200"
+                                           TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Button Click="Button_Click_1" 
+                                            Content="Sí" 
+                                            Margin="12"/>
+                                    <Button Click="Button_Click_1" 
+                                            Content="No" 
+                                            Margin="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>
