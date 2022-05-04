@@ -22,9 +22,12 @@ namespace card_game_DSI
     /// </summary>
     public sealed partial class Settings : Page
     {
+        public int sliderValue { get; set; }
+
         public Settings()
         {
             this.InitializeComponent();
+            sliderValue = 50;
         }
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
@@ -38,6 +41,9 @@ namespace card_game_DSI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            slider1.Value = 50;
+            slider2.Value = 50;
+            slider3.Value = 50;
 
         }
 

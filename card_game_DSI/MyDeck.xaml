@@ -13,11 +13,13 @@
         <DataTemplate x:Key="myCard" x:DataType="local:Card">
             <Grid Height="150"
                   Width="100"
-                  Margin="8">
+                  Margin="8"
+>
 
                 <Image Stretch="UniformToFill" Source="{x:Bind cardPicture}"
                        VerticalAlignment="Center"/>
             </Grid>
+
 
         </DataTemplate>
 
@@ -58,34 +60,37 @@
             </Grid.BorderBrush>
 
             <GridView
-        x:Name="BasicGridView"
-        Grid.Row="1" 
-        Grid.Column="1" 
-        Margin="70"
-        ItemsSource= "{x:Bind allCards}"
-        ItemTemplate="{StaticResource myCard}"
-        IsItemClickEnabled="True"
-        ItemClick="BasicGridView_ItemClick"
-        SelectionMode="Multiple"
-        SelectionChanged="BasicGridView_SelectionChanged"/>
+                x:Name="BasicGridView"
+                Grid.Row="1" 
+                Grid.Column="1" 
+                Margin="70"
+                ToolTipService.ToolTip="{x:Bind cardDescription2}"
+                ItemsSource= "{x:Bind allCards}"
+                ItemTemplate="{StaticResource myCard}"
+                IsItemClickEnabled="True"
+                ItemClick="BasicGridView_ItemClick"
+                SelectionMode="Multiple"
+                SelectionChanged="BasicGridView_SelectionChanged"/>
 
 
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid Height="45" CornerRadius="30,30,0,0" Background="#CC195676" Margin="8,0,48,0" VerticalAlignment="Top">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Margin="20,0,0,0" Text="MI COLECCIÓN" 
+                    <TextBlock Margin="20,5,0,0" Text="MI COLECCIÓN" 
                                FontSize="30" 
                                FontWeight="Bold"
+                               FontFamily="Bookman Old Style"
                                Foreground="White" Grid.RowSpan="2">
 
 
 
 
                     </TextBlock>
-                    <TextBlock Margin="80,0,0,0" Text="Ordenar por:" 
+                    <TextBlock Margin="80,5,0,0" Text="Ordenar por:" 
                                FontSize="26" 
                                FontWeight="Bold"
+                               FontFamily="Bookman Old Style"
                                Foreground="White" Grid.RowSpan="2">
 
 
@@ -113,9 +118,10 @@
             <StackPanel Orientation="Vertical">
                 <Grid Height="45" CornerRadius="30,30,0,0" Background="#CC195676" Margin="0,-5,0,0">
                     
-                    <TextBlock Margin="20,0,0,0" Text="MI MAZO" 
+                    <TextBlock Margin="20,5,0,0" Text="MI MAZO" 
                                FontSize="30" 
                                FontWeight="Bold"
+                               FontFamily="Bookman Old Style"
                                Foreground="White" Grid.RowSpan="2">
 
 
@@ -134,6 +140,7 @@
                                 Margin="0,0,0,0"
                                 ItemsSource= "{x:Bind myDeck}"
                                 ItemTemplate="{StaticResource myCard}"
+                                ToolTipService.ToolTip="{x:Bind cardDescription}"
                                 IsItemClickEnabled="True"
                                 ItemClick="BasicGridView2_ItemClick"
                                 SelectionMode="Single"
@@ -162,6 +169,7 @@
                                 Height="100"
                                 FontSize="30"
                                 FontWeight="Bold"
+                                FontFamily="Bookman Old Style"
                                 HorizontalAlignment="Stretch" 
                                 Background="White"
                                 Foreground="#FF00717C" FocusVisualPrimaryBrush="#33000000"/>

@@ -28,9 +28,16 @@ namespace card_game_DSI
         public ObservableCollection<Card> allCards { get; } = new ObservableCollection<Card>();
         public ObservableCollection<Card> myDeck { get; } = new ObservableCollection<Card>();
 
+        public string cardDescription { get; set; }
+        public string cardDescription2 { get; set; }
+
         public MyDeck()
         {
             this.InitializeComponent();
+            cardDescription = "Carta perteneciente a tu mazo";
+            cardDescription2 = "Pulsa en las cartas para añadirlas y quitarlas del mazo";
+
+
         }
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
