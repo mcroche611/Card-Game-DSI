@@ -172,7 +172,8 @@
                                 FontFamily="Bookman Old Style"
                                 HorizontalAlignment="Stretch" 
                                 Background="White"
-                                Foreground="#FF00717C" FocusVisualPrimaryBrush="#33000000"/>
+                                Foreground="#FF00717C" FocusVisualPrimaryBrush="#33000000"
+							    Click="BackButton_OnClick"/>
 
 
                 </Grid>
