@@ -87,7 +87,8 @@
                     <MenuFlyout x:Name="menuFlyout">
                         <MenuFlyout.Items>
                             <MenuFlyoutItem x:Name="Retar"  
-                                            Text="Retar"/>
+                                            Text="Retar"
+											Click="Tablero_Click"/>
                             <MenuFlyoutItem x:Name="Remove" 
                                             Text="Eliminar amigo"    
                                             Click="Remove_Click"/>

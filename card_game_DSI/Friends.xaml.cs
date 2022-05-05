@@ -65,6 +65,11 @@ namespace card_game_DSI
             content = "";
         }
 
+        private void Tablero_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Board));
+        }
+
         private void ImageGridView_Tapped(object sender, TappedRoutedEventArgs e)
         {
             ListView listView = (ListView)sender;

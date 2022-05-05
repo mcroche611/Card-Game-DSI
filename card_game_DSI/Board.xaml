@@ -35,17 +35,6 @@
             <RowDefinition Height="40*"/>
         </Grid.RowDefinitions>
 
-        <!--Back button-->
-        <StackPanel Orientation="Horizontal"
-                    VerticalAlignment="Top">
-            <Button Click="BackButton_OnClick" Foreground="Black">
-                <SymbolIcon Symbol="Back"/>
-            </Button>
-            <TextBlock Text="ESC"
-                       VerticalAlignment="Center"
-                       Foreground="Black"/>
-        </StackPanel>
-
         <!--Balanza-->
         <Image Grid.Row="0"
                Grid.Column="0"
