@@ -28,7 +28,17 @@
 
         </Grid.ColumnDefinitions>
 
-
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center">
+            <Button Click="BackButton_OnClick" 
+                    Background="Transparent"
+                    Foreground="Black">
+                <SymbolIcon Symbol="Back"/>
+            </Button>
+            <TextBlock Text="ESC"
+                       VerticalAlignment="Center"
+                       Foreground="Black"/>
+        </StackPanel>
 
         <Viewbox HorizontalAlignment="Stretch"
                  VerticalAlignment="Stretch"
@@ -279,7 +289,7 @@
                     </CheckBox>
                     <CheckBox Margin="90,0,0,0" >
                         <TextBlock
-                            Text=" Pant. completa "
+                            Text=" Animaciones "
                             FontSize="8"
                             FontWeight="Bold"
                             Foreground="White"
@@ -302,7 +312,7 @@
                     </CheckBox>
                     <CheckBox Margin="65,0,0,0" >
                         <TextBlock
-                            Text=" Pant. completa "
+                            Text=" Vsync"
                             FontSize="8"
                             FontWeight="Bold"
                             Foreground="White"
